@@ -38,8 +38,6 @@
       </div>      
     </div>
   </div>
-</div>
-@stop
 @section('modals')
 <!-- The Modal -->
 <div class="modal fade" id="modal-timeframe" style="height : 50%;">
@@ -70,6 +68,8 @@
 
     </div>
   </div>
+</div>
+@stop
 </div>
 @stop
 @section('script')
