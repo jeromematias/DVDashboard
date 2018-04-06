@@ -196,18 +196,24 @@ $(function(){
 	function init_graph(SurveyName){
 		$.get(window.location.href + 'graph',{SurveyName:SurveyName},function(data){
 			console.log(data)
+			var xAxisData = [];
+			var seriesData = [];
+			for(var i in data){
+				xAxisData.push(data[i].DataDate)
+				seriesData.push(data[i].OffSet)
+			}
 			var echartBar = echarts.init(document.getElementById('container'));			
 			option = null;
 			option = {
 			    xAxis: {
 			        type: 'category',
-			        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+			        data: xAxisData
 			    },
 			    yAxis: {
 			        type: 'value'
 			    },
 			    series: [{
-			        data: [120, 200, 150, 80, 70, 110, 130],
+			        data: seriesData,
 			        type: 'bar'
 			    }]
 			};
