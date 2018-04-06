@@ -27,7 +27,7 @@ $(function(){
 			WarningTime : $('#warningtime').val(),
 			ErrorTime : $('#errortime').val()
 		}
-		$.post(window.location.href + "UpdateSurveyTimeFrame",request,function(response){
+		$.post(window.location.href + "updatetimeframe",request,function(response){
 			console.log(response)
 			showTimeFrames();
 		})
