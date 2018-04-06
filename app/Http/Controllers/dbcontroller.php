@@ -33,7 +33,7 @@ class dbcontroller extends Controller
   }
 
   public function UpdateSurveyTimeFrame(Request $r){
-  	$this->UpdateSurveyTimeFrame = DB::select('EXEC UpdateSurveyTimeFrame ?, ?, ?, ?',array($r->SurveyName,$r->WeekNum,$r->WarningTime,$r->ErrorTime));
+  	$this->UpdateSurveyTimeFrame = DB::table('EXEC UpdateSurveyTimeFrame ?, ?, ?, ?',array($r->SurveyName,$r->WeekNum,$r->WarningTime,$r->ErrorTime));
   	return response('update success');
   }
 
