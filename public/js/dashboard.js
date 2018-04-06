@@ -1,7 +1,6 @@
 $(function(){
 	var Surveylist = [];
-	$.get(window.location.href + "Surveys",function(data){
-		console.log(data);
+	$.get(window.location.href + "Surveys",function(data){		
 		for(var i in data){
 			Surveylist.push(data[i].SurveyName)
 		}
