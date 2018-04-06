@@ -72,6 +72,9 @@ $(function(){
 				$(this).click(function(){
 					alert($(this).data('value'))
 				})
+				$(this).css({
+					cursor : 'pointer'
+				})
 			})
 		}).done(function(){
 			
