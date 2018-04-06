@@ -37,7 +37,7 @@ $(function(){
 			$('#warningtime').val('')
 			$('#errortime').val('')
 			$('#modal-timeframe').hide();
-			bootbox.alert("Timeframe successfully updated!");
+			alert("Timeframe successfully updated!");
 		})
 	})
 	/**
