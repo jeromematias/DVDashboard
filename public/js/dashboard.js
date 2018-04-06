@@ -85,8 +85,8 @@ $(function(){
 						if($('#surveynames').val() == Validationlist[i].SurveyName){
 							output += '<tr>'+
 												'<td class="text-center">'+ Validationlist[i].Warning +'</td>'+
-												'<td class="text-center">'+ Validationlist[i].Error +'</td>';
-												'<td><i class="icon-note float-right font-weight-bold text-primary" id="up-validation" data-value="'+ $('#surveynames').val() +'"></i></td>'
+												'<td class="text-center">'+ Validationlist[i].Error +'</td>'+
+												'<td><i class="icon-note float-right font-weight-bold text-primary" id="up-validation" data-value="'+ $('#surveynames').val() +'"></i></td>';
 							output += '</tr>'
 						}
 					}
