@@ -43,7 +43,7 @@ $(function(){
 											'<td>'+ showeekday(data[i].WeekDay) +'</td>'+
 											'<td class="text-center">'+ data[i].MinsBefore +'</td>'+
 											'<td class="text-center">'+ data[i].MinsAfter +'</td>'+
-											'<td><i class="icon-note float-right font-weight-bold text-primary" data-toggle="modal" data-target="#modal-timeframe" id="up-minb" data-value="'+ data[i].WeekDay +'"></i></td>'
+											'<td><i class="icon-note float-right font-weight-bold text-primary" id="up-minb" data-value="'+ data[i].WeekDay +'"></i></td>'
 					output += '</tr>'
 				}
 			}
@@ -73,7 +73,7 @@ $(function(){
 			$('#tb-conversion tbody tr td #up-minb').each(function(){
 				$(this).click(function(){
 					//alert($(this).data('value'))
-					//$('#modal-timeframe').modal('show');
+					$('#modal-timeframe').modal('show');
 				})
 				$(this).css({
 					cursor : 'pointer'
