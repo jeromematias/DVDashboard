@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use DB;
 use App\Surveys;
 use Illuminate\Http\Request;
 
