@@ -33,7 +33,12 @@ class dbcontroller extends Controller
   }
 
   public function UpdateSurveyTimeFrame(Request $r){
-  	DB::raw('SET ANSI_NULLS ON; SET ANSI_WARNINGS ON; EXEC UpdateSurveyTimeFrame ?, ?, ?, ?',array($r->SurveyName,$r->WeekNum,$r->WarningTime,$r->ErrorTime));
+  	//DB::select('SET ANSI_NULLS ON; SET ANSI_WARNINGS ON; EXEC UpdateSurveyTimeFrame ?, ?, ?, ?',array($r->SurveyName,$r->WeekNum,$r->WarningTime,$r->ErrorTime));
+  	//Update SurveyTimeFrames set MinsBefore = @MinsBefore, MinsAfter=@MinsAfter where SurveyName=@SurveyName and WeekDay=@WeekDay
+  	DB::table('SurveyTimeFrames')
+            ->where('SurveyName', $r->SurveyName)
+            ->where('WeekDay', $r->WeekNum)
+            ->update(['MinsBefore' => $r->WarningTime],['MinsAfter' => $r->ErrorTime]);
   	return response('update success');
   }
 
