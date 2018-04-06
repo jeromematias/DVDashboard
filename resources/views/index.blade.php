@@ -42,42 +42,17 @@
 @stop
 @section('modals')
 <!-- The Modal -->
-<div class="modal fade" id="respondent-mod" style="height : 100%;">
+<div class="modal fade" id="modal-timeframe" style="height : 100%;">
   <div class="modal-dialog modal-xl" style="height : calc(100% - 150px);">
     <div class="modal-content" style="height : 100%;">
       <!-- Modal Header -->
       <div class="modal-header bg-danger">
-        <h4 class="modal-title">Households Information</h4>
+        <h4 class="modal-title">Update</h4>
         <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
       <!-- Modal body -->
       <div class="modal-body" style="height: calc(100% - 200px);">        
-        <div class="row" style="height: 100%">
-          <div class="col" style="height: 100%">
-            <ul class="nav nav-pills mb-1" id="pills-tab" role="tablist">              
-              <li class="nav-item">
-                <a class="nav-link active" id="pills-respo-tab" data-toggle="pill" href="#pills-respo" role="tab" aria-controls="pills-respo" aria-selected="true">Respondent</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" id="pills-income-tab" data-toggle="pill" href="#pills-income" role="tab" aria-controls="pills-income" aria-selected="false">Major Income</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" id="pills-appliances-tab" data-toggle="pill" href="#pills-appliances" role="tab" aria-controls="pills-appliances" aria-selected="false">Appliances</a>
-              </li>
-            </ul>
-            <div class="tab-content" id="pills-tabContent" style="height: calc(100% - 30px)">
-              <div class="tab-pane fade show active" id="pills-respo" role="tabpanel" aria-labelledby="pills-respo-tab" style="height: 100%">
-                1
-              </div>
-              <div class="tab-pane fade" id="pills-income" role="tabpanel" aria-labelledby="pills-income-tab" style="height: 100%">
-                2
-              </div>
-              <div class="tab-pane fade" id="pills-appliances" role="tabpanel" aria-labelledby="pills-appliances-tab" style="height: 100%">
-                3
-              </div>
-            </div>
-          </div>
-        </div>      
+
       </div>
       <!-- Modal footer -->
       <div class="modal-footer bg-light">

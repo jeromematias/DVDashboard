@@ -71,7 +71,7 @@ $(function(){
 			$('#tb-conversion tbody tr td #up-minb').each(function(){
 				$(this).click(function(){
 					//alert($(this).data('value'))
-					bootbox.prompt("This is the default prompt!", function(result){ console.log(result); });
+					$('#modal-timeframe').modal('show');
 				})
 				$(this).css({
 					cursor : 'pointer'
