@@ -54,11 +54,13 @@ $(function(){
 					output += '</tr>'
 					output += '</thead><tbody>'
 					for(var i in Validationlist){
-						output += '<tr>'+
-											'<td></td>'+
-											'<td class="text-center">'+ Validationlist[i].Warning +'</td>'+
-											'<td class="text-center">'+ Validationlist[i].Error +'</td>';
-						output += '</tr>'
+						if($('#surveynames').val() == Validationlist[i].SurveyName){
+							output += '<tr>'+
+												'<td></td>'+
+												'<td class="text-center">'+ Validationlist[i].Warning +'</td>'+
+												'<td class="text-center">'+ Validationlist[i].Error +'</td>';
+							output += '</tr>'
+						}
 					}
 					output += '</tbody></table>';
 					//Validationlist
