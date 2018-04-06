@@ -35,8 +35,8 @@ $(function(){
 		$.get(window.location.href + "updatetimeframe",request,function(response){
 			showTimeFrames();
 			$('#warningtime').val('')
-			$('#errortime').val('')						
-			$('#modal-timeframe').hide();
+			$('#errortime').val('')			
+			bootbox.alert("Timeframe successfully updated!");			
 		})
 	})
 	/**
@@ -95,7 +95,8 @@ $(function(){
 				$(this).click(function(){
 					weekday = $(this).data('value');					
 					$('#modal-timeframe').modal({
-						keyboard: false
+						backdrop: 'static',
+    				keyboard: false
 					})
 				})
 				$(this).css({
