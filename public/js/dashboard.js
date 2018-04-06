@@ -225,7 +225,8 @@ $(function(){
 			        label: {
 	                normal: {
 	                    show: true,
-	                    position: 'inside'
+	                    position: 'insideTop',
+	                    color : '#000'
 	                }
 	            }
 			    }]
