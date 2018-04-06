@@ -11,6 +11,7 @@ class dbcontroller extends Controller
 	protected $surveylist = array();
 	protected $timeframes = array();
 	protected $UpdateSurveyTimeFrame = array();
+	protected $difference = array();
 	/**
 	 * [__construct description]
 	 */
@@ -45,5 +46,10 @@ class dbcontroller extends Controller
             ->where('SurveyName', $r->SurveyName)            
             ->update(['MinsValidationWarning' => $r->validationwarning,'MinsValidationError' => $r->validationerror]);
   	return response('success');
+  }
+
+  public function GetDiff(Request $r){
+  	$this->difference = DB::select('EXEC GetDiff ?',array($r->SurveyName));\
+  	return response($this->difference);
   }  
 }

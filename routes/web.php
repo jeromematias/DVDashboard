@@ -22,3 +22,5 @@ Route::get('/timeframes','dbcontroller@GetSurveyTimeFrames');
 Route::get('/updatetimeframe','dbcontroller@UpdateSurveyTimeFrame');
 
 Route::get('/updatesurvey','dbcontroller@UpdateSurveyValidatetimings');
+
+Route::get('/graph','dbcontroller@GetDiff');
