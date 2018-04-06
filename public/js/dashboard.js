@@ -40,8 +40,8 @@ $(function(){
 				if($('#surveynames').val() == data[i].SurveyName){
 					output += '<tr>'+
 											'<td>'+ showeekday(data[i].WeekDay) +'</td>'+
-											'<td class="text-center">'+ data[i].MinsBefore +' <i class="icon-note float-right font-weight-bold text-primary"></i></td>'+
-											'<td class="text-center">'+ data[i].MinsAfter +' <i class="icon-note float-right font-weight-bold text-primary"></td>';
+											'<td class="text-center">'+ data[i].MinsBefore +' <i class="icon-note float-right font-weight-bold text-primary" id="up-minb" data-value="'+ data[i].WeekDay +'"></i></td>'+
+											'<td class="text-center">'+ data[i].MinsAfter +' <i class="icon-note float-right font-weight-bold text-primary" id="up-mina" data-value="'+ data[i].WeekDay +'"></td>';
 					output += '</tr>'
 				}
 			}
@@ -66,7 +66,13 @@ $(function(){
 					}
 					output += '</tbody></table>';
 					//Validationlist
-			$('#timeframewrapper').html(output);			
+			$('#timeframewrapper').html(output);	
+
+			$('#tb-conversion tbody tr td #up-minb').each(function(){
+				$(this).click(function(){
+					alert($(this).data('value'))
+				})
+			})
 		}).done(function(){
 			
 		})	
