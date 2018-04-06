@@ -73,7 +73,6 @@
 </div>
 @stop
 @section('script')
-<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
 <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="js/dataTables.bootstrap4.min.js"></script>
 <script type="text/javascript" src="js/jQuery.print.js"></script>
