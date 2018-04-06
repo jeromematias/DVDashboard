@@ -46,8 +46,8 @@
   <div class="modal-dialog modal-md" style="height : calc(100% - 150px);">
     <div class="modal-content" style="height : 100%;">
       <!-- Modal Header -->
-      <div class="modal-header bg-primary">
-        <h5 class="modal-title">Update</h5>
+      <div class="modal-header bg-success">
+        <strong class="modal-title text-dark">Update</strong>
         <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
       <!-- Modal body -->
@@ -65,7 +65,7 @@
       </div>
       <!-- Modal footer -->
       <div class="modal-footer bg-light">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-light">Save</button>
       </div>
 
     </div>
