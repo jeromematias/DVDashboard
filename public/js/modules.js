@@ -12,8 +12,7 @@ $.fn.appendSurveyOption = function(Survey){
     .end();
 	for(var i in Survey.Surveylist){
 		var surveyname = Survey.Surveylist[i]
-		$(self).find('option')
-	    .append('<option value="'+ surveyname +'">' + surveyname + '</option>')
+		$(self).append('<option value="'+ surveyname +'">' + surveyname + '</option>')
 	    .end();
 	}
 }
