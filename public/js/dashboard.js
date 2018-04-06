@@ -196,9 +196,7 @@ $(function(){
 	function init_graph(SurveyName){
 		$.get(window.location.href + 'graph',{SurveyName:SurveyName},function(data){
 			console.log(data)
-			var dom = document.getElementById("container");
-			var myChart = echarts.init(dom);
-			var app = {};
+			var echartBar = echarts.init(document.getElementById('container'));			
 			option = null;
 			option = {
 			    xAxis: {
@@ -212,7 +210,8 @@ $(function(){
 			        data: [120, 200, 150, 80, 70, 110, 130],
 			        type: 'bar'
 			    }]
-			};	
+			};
+			echartBar.setOption(option);	
 		})		
 	}		
 });
