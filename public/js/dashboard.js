@@ -27,7 +27,7 @@ $(function(){
 			WarningTime : $('#warningtime').val(),
 			ErrorTime : $('#errortime').val()
 		}
-		$.post(window.location.href + "updatetimeframe",request,function(response){
+		$.get(window.location.href + "updatetimeframe",request,function(response){
 			console.log(response)
 			showTimeFrames();
 		})
