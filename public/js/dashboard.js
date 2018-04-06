@@ -53,7 +53,7 @@ $(function(){
 											'<th class="text-center">Error Minutes after Conversion</th>';
 					output += '</tr>'
 					output += '</thead><tbody>'
-					for(var i Validationlist){
+					for(var i in Validationlist){
 						output += '<tr>'+
 											'<td></td>'+
 											'<td class="text-center">'+ Validationlist[i].Warning +'</td>'+
