@@ -217,7 +217,7 @@ $(function(){
 			        data: xAxisData
 			    },
 			    yAxis: {
-			        type: 'value',
+			        data : seriesData,
 			        axisLabel: {
 			            inside: true,
 			            textStyle: {
