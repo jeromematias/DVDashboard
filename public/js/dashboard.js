@@ -73,9 +73,7 @@ $(function(){
 			$('#tb-conversion tbody tr td #up-minb').each(function(){
 				$(this).click(function(){
 					//alert($(this).data('value'))
-					$('#modal-timeframe').modal({
-					  keyboard: false
-					})
+					$('#modal-timeframe').modal('show')
 				})
 				$(this).css({
 					cursor : 'pointer'

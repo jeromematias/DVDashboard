@@ -137,9 +137,9 @@
   </footer>  
   <!-- Bootstrap and necessary plugins -->
   <script src="js/jquery.min.js"></script>
-  <script src="js/popper.min.js"></script>  
-  <script src="js/bootbox.min.js"></script>
+  <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/bootbox.min.js"></script>
   <script src="js/pace.min.js"></script>
   <!-- CoreUI main scripts -->
   <script src="js/coreui.js"></script>
