@@ -33,12 +33,10 @@ $(function(){
 			ErrorTime : $('#errortime').val()
 		}
 		$.get(window.location.href + "updatetimeframe",request,function(response){
-			if(response == 'success'){
-				showTimeFrames();
-				$('#warningtime').val('')
-				$('#errortime').val('')
-				bootbox.alert("Timeframe successfully updated!");
-			}			
+			showTimeFrames();
+			$('#warningtime').val('')
+			$('#errortime').val('')
+			bootbox.alert("Timeframe successfully updated!");
 		})
 	})
 	/**
