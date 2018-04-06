@@ -19,4 +19,4 @@ Route::get('/Surveys','dbcontroller@getSurveys');
 
 Route::get('/timeframes','dbcontroller@GetSurveyTimeFrames');
 
-Route::post('/updatetimeframe','dbcontroller@UpdateSurveyTimeFrame');
+Route::get('/updatetimeframe','dbcontroller@UpdateSurveyTimeFrame');
