@@ -6268,7 +6268,7 @@ body {
 
 .aside-menu {
   z-index: 1019;
-  width: 250px;
+  width: 550px;
   color: #29363d;
   background: #fff;
   border-left: 1px solid #c2cfd6; }
@@ -9118,7 +9118,7 @@ app-root {
     margin-left: 0; } }
 
 .aside-menu-hidden .aside-menu {
-  margin-right: -250px; }
+  margin-right: -550px; }
 
 .aside-menu-fixed .aside-menu {
   position: fixed;
@@ -9128,7 +9128,7 @@ app-root {
     height: calc(100vh - 2.375rem - 55px); }
 
 .aside-menu-fixed .main, .aside-menu-fixed .app-footer {
-  margin-right: 250px; }
+  margin-right: 550px; }
 
 .aside-menu-fixed.aside-menu-hidden .main, .aside-menu-fixed.aside-menu-hidden .app-footer {
   margin-right: 0; }
