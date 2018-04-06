@@ -111,7 +111,7 @@
       <div class="tab-content">
         <div class="tab-pane p-3 active" id="setup" role="tabpanel">          
           <div class="row">
-            <div class="form-group">
+            <div class="form-group col-sm-12">
               <label class="col-md-9 col-form-label" for="select2">Select Survey Name</label>
               <div class="col-md-9">
                 <select id="surveynames" name="surveynames" class="form-control">
