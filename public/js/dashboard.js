@@ -119,11 +119,11 @@ $(function(){
 					output += '</tr>'
 					output += '</thead><tbody class="table-sm">'
 			
-			for(var i in Validationlist){
-				if($('#surveynames').val() == Validationlist[i].SurveyName){
-					output += '<tr>'+
-										'<td class="text-center">'+ Validationlist[i].Warning +'</td>'+
-										'<td class="text-center">'+ Validationlist[i].Error +'</td>'+
+			for(var i in data){
+				if($('#surveynames').val() == data[i].SurveyName){
+					output += '<tr>'+					
+										'<td class="text-center">'+ data[i].MinsValidationWarning +'</td>'+
+										'<td class="text-center">'+ data[i].MinsValidationError +'</td>'+
 										'<td><i class="icon-note float-right font-weight-bold text-primary" id="up-validation" data-value="'+ $('#surveynames').val() +'"></i></td>';
 					output += '</tr>'
 				}
