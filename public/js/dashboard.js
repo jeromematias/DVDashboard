@@ -5,6 +5,7 @@ $(function(){
 	})
 	$.ajax({
 		type : 'GET',
+		url : window.location.href + "Surveys",
 		success : function(data){
 			console.log(data);
 		}
