@@ -21,16 +21,16 @@ $(function(){
 					output += '<thead>'
 					output += '<tr>'+
 											'<th>TV weekday</th>'+
-											'<th>Warning time MAM(MinsBefore)</th>'+
-											'<th>Error time MAM(MinsAfter)</th>';
+											'<th class="text-center">Warning time MAM(MinsBefore)</th>'+
+											'<th class="text-center">Error time MAM(MinsAfter)</th>';
 					output += '</tr>'
 					output += '</thead><tbody>'
 			for(var i in data){
 				if($('#surveynames').val() == data[i].SurveyName){
 					output += '<tr>'+
 											'<td>'+ showeekday(data[i].WeekDay) +'</td>'+
-											'<td>'+ data[i].MinsBefore +'</td>'+
-											'<td>'+ data[i].MinsAfter +'</td>';
+											'<td class="text-center">'+ data[i].MinsBefore +'</td>'+
+											'<td class="text-center">'+ data[i].MinsAfter +'</td>';
 					output += '</tr>'
 				}
 			}
