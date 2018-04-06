@@ -129,22 +129,22 @@ $(function(){
 				}
 			}
 			output += '</tbody></table>';
-		})
-		
-		$('#vaildationwrapper').html(output);	
 
-		$('#tb-validation tbody tr td #up-validation').each(function(){
-			$(this).click(function(){
-				validationsurveyname = $(this).data('value');					
-				$('#modal-validation').modal({
-					backdrop: 'static',
-  				keyboard: false
+			$('#vaildationwrapper').html(output);	
+
+			$('#tb-validation tbody tr td #up-validation').each(function(){
+				$(this).click(function(){
+					validationsurveyname = $(this).data('value');					
+					$('#modal-validation').modal({
+						backdrop: 'static',
+	  				keyboard: false
+					})
+				})
+				$(this).css({
+					cursor : 'pointer'
 				})
 			})
-			$(this).css({
-				cursor : 'pointer'
-			})
-		})
+		})		
 	}
 	function showeekday(num){
 		switch(Number(num)){
