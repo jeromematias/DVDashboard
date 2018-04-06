@@ -110,14 +110,14 @@ $(function(){
 	function showvalidation(){
 		$.get(window.location.href + "Surveys",function(data){
 			//validation
-			var output += '<table class="table table-bordered" id="tb-validation">'
-			output += '<thead>'
-			output += '<tr>'+
-									'<th class="text-center">Warning Minutes after Conversion</th>'+
-									'<th class="text-center">Error Minutes after Conversion</th>'+
-									'<th>Update</th>';
-			output += '</tr>'
-			output += '</thead><tbody class="table-sm">'
+			var output = '<table class="table table-bordered" id="tb-validation">'
+					output += '<thead>'
+					output += '<tr>'+
+											'<th class="text-center">Warning Minutes after Conversion</th>'+
+											'<th class="text-center">Error Minutes after Conversion</th>'+
+											'<th>Update</th>';
+					output += '</tr>'
+					output += '</thead><tbody class="table-sm">'
 			
 			for(var i in Validationlist){
 				if($('#surveynames').val() == Validationlist[i].SurveyName){
