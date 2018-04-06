@@ -86,11 +86,11 @@
       <!-- Modal body -->
       <div class="modal-body" style="height: 100%;">        
         <div class="form-group">
-          <label class="col-md-9 col-form-label" for="validationwarning"><strong>Validation Warning</strong></label>
+          <label class="col-md-9 col-form-label" for="validationwarning"><strong>Warning Minutes</strong></label>
           <div class="col-md-12">
             <input type="text" class="form-control" id="validationwarning">
           </div>
-          <label class="col-md-9 col-form-label" for="validationerror"><strong>Validation Error</strong></label>
+          <label class="col-md-9 col-form-label" for="validationerror"><strong>Error Minutes</strong></label>
           <div class="col-md-12">
             <input type="text" class="form-control" id="validationerror">
           </div>
