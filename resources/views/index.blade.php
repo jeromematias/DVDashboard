@@ -46,8 +46,8 @@
   <div class="modal-dialog modal-md" style="height : calc(100% - 150px);">
     <div class="modal-content" style="height : 100%;">
       <!-- Modal Header -->
-      <div class="modal-header bg-danger">
-        <h4 class="modal-title">Update</h4>
+      <div class="modal-header bg-primary">
+        <strong class="modal-title">Update</strong>
         <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
       <!-- Modal body -->
