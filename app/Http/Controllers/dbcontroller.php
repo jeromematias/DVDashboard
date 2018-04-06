@@ -38,7 +38,7 @@ class dbcontroller extends Controller
   	DB::table('SurveyTimeFrames')
             ->where('SurveyName', $r->SurveyName)
             ->where('WeekDay', $r->WeekNum)
-            ->update(['MinsBefore' => $r->WarningTime],['MinsAfter' => $r->ErrorTime]);
+            ->update(['MinsBefore' => $r->WarningTime,'MinsAfter' => $r->ErrorTime]);
   	return response('update success');
   }
 
