@@ -200,7 +200,14 @@ $(function(){
 			var seriesData = [];
 			for(var i in data){
 				xAxisData.push(data[i].DataDate)
-				seriesData.push(data[i].OffSet)
+				seriesData.push({value : data[i].OffSet, itemStyle : {
+					normal : {
+            color : data[i].ColorCode
+          },
+          emphasis : {
+            color : data[i].ColorCode
+          }
+				}})
 			}
 			var echartBar = echarts.init(document.getElementById('container'));			
 			option = null;
