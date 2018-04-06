@@ -35,8 +35,7 @@ $(function(){
 		$.get(window.location.href + "updatetimeframe",request,function(response){
 			showTimeFrames();
 			$('#warningtime').val('')
-			$('#errortime').val('')			
-			bootbox.alert("Timeframe successfully updated!");
+			$('#errortime').val('')						
 			$('#modal-timeframe').hide();
 		})
 	})
