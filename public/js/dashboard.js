@@ -25,6 +25,8 @@ $(function(){
 	function showTimeFrames(){
 		$.get(window.location.href + "timeframes",function(data){		
 			console.log(data)
+					
+
 					//Conversion
 			var output = '<label class="col-md-9 col-form-label" for="tb-conversion"><strong>Conversion</strong></label><table class="table table-bordered" id="tb-conversion">';
 					output += '<thead>'
@@ -44,11 +46,12 @@ $(function(){
 				}
 			}
 					output += '</tbody></table>';
+					
+
 					//validation
 					output += '<label class="col-md-9 col-form-label" for="tb-validation"><strong>Validation</strong></label><table class="table table-bordered" id="tb-validation">'
 					output += '<thead>'
 					output += '<tr>'+
-											'<th></th>'+
 											'<th class="text-center">Warning Minutes after Conversion</th>'+
 											'<th class="text-center">Error Minutes after Conversion</th>';
 					output += '</tr>'
@@ -56,7 +59,6 @@ $(function(){
 					for(var i in Validationlist){
 						if($('#surveynames').val() == Validationlist[i].SurveyName){
 							output += '<tr>'+
-												'<td></td>'+
 												'<td class="text-center">'+ Validationlist[i].Warning +'</td>'+
 												'<td class="text-center">'+ Validationlist[i].Error +'</td>';
 							output += '</tr>'
