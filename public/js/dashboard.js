@@ -36,6 +36,7 @@ $(function(){
 			showTimeFrames();
 			$('#warningtime').val('')
 			$('#errortime').val('')
+			$('#modal-timeframe').hide();
 			bootbox.alert("Timeframe successfully updated!");
 		})
 	})
