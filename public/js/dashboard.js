@@ -40,8 +40,8 @@ $(function(){
 				if($('#surveynames').val() == data[i].SurveyName){
 					output += '<tr>'+
 											'<td>'+ showeekday(data[i].WeekDay) +'</td>'+
-											'<td class="text-center">'+ data[i].MinsBefore +'</td>'+
-											'<td class="text-center">'+ data[i].MinsAfter +'</td>';
+											'<td class="text-center">'+ data[i].MinsBefore +'<i class="icon-note"></i></td>'+
+											'<td class="text-center">'+ data[i].MinsAfter +'<i class="icon-note"></td>';
 					output += '</tr>'
 				}
 			}
