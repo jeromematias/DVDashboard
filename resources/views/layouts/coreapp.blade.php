@@ -119,6 +119,9 @@
                 </select>
               </div>
             </div>
+            <div class="form-group col-sm-12">
+              <div class="table-responsive" id="timeframewrapper"></div>
+            </div>
           </div>
         </div>
       </div>

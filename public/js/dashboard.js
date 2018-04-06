@@ -16,12 +16,56 @@ $(function(){
 	 */	
 	function showTimeFrames(){
 		$.get(window.location.href + "timeframes",function(data){		
-			console.log(data)			
+			console.log(data)
+			var output = '<table class="table table-bordered">';
+					output += '<thead>'
+					output += '<tr>'+
+											'<th>TV weekday</th>'+
+											'<th>Warning time MAM(MinsBefore)</th>'+
+											'<th>Error time MAM(MinsAfter)</th>';
+					output += '</tr>'
+					output += '</thead><tbody>'
+			for(var i in data){
+				if($('#surveynames').val() == data[i].SurveyName){
+					output += '<tr>'+
+											'<td>'+ showeekday(data[i].WeekDay) +'</td>'+
+											'<td>'+ data[i].MinsBefore +'</td>'+
+											'<td>'+ data[i].MinsAfter +'</td>';
+					output += '</tr>'
+				}
+			}
+					output += '</tbody></table>';
+			$('#timeframewrapper').html(output);			
 		}).done(function(){
 			
 		})	
 	}
 
+	function showeekday(num){
+		switch(Number(num)){
+			case 1 : 
+				return 'Monday';
+				break;
+			case 2 : 
+				return 'Tuesday';
+				break;
+			case 3 : 
+				return 'Wednesday';
+				break;
+			case 4 : 
+				return 'Thursday';
+				break;
+			case 5 : 
+				return 'Friday';
+				break;
+			case 6 : 
+				return 'Saturday';
+				break;
+			case 7 : 
+				return 'Sunday';
+				break;
+		}
+	}
 	/**
 	 * [init_surveynames description]
 	 * @return {[type]} [description]
