@@ -16,7 +16,6 @@
 			$(self).append('<option value="'+ surveyname +'">' + surveyname + '</option>')
 		    .end();
 		}
-
 		return "done"
 	}
 }( jQuery ));
