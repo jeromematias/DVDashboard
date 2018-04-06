@@ -77,5 +77,8 @@ $(function(){
 		$('#surveynames').appendSurveyOption({
 			Surveylist : Surveylist
 		})
+		$('surveynames').on('change', function() {
+			showTimeFrames()
+		})
 	}		
 });
