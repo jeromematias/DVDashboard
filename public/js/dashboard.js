@@ -8,9 +8,13 @@ $(function(){
 	var Validationlist = [];
 	var weekday;
 	var validationsurveyname;
+	var graphsurveyname;
 	$.get(window.location.href + "Surveys",function(data){
 		console.log(data)		
 		for(var i in data){
+			if(i == 0){
+				graphsurveyname = data[i].SurveyName;
+			}
 			Surveylist.push(data[i].SurveyName)
 			Validationlist.push({
 				SurveyName : data[i].SurveyName,
@@ -23,6 +27,7 @@ $(function(){
 		init_surveynames();
 		showTimeFrames();
 		showvalidation();
+		init_graph(graphsurveyname);
 	})
 	
 	$('#savetimeframe').click(function(){
@@ -186,5 +191,28 @@ $(function(){
 			showTimeFrames()
 			showvalidation()
 		})
+	}
+
+	function init_graph(SurveyName){
+		$.get(window.location.href + 'graph',{SurveyName:SurveyName},function(data){
+			console.log(data)
+			var dom = document.getElementById("container");
+			var myChart = echarts.init(dom);
+			var app = {};
+			option = null;
+			option = {
+			    xAxis: {
+			        type: 'category',
+			        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+			    },
+			    yAxis: {
+			        type: 'value'
+			    },
+			    series: [{
+			        data: [120, 200, 150, 80, 70, 110, 130],
+			        type: 'bar'
+			    }]
+			};	
+		})		
 	}		
 });

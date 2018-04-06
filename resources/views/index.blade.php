@@ -34,7 +34,7 @@
     </ul>
     <div class="tab-content">
       <div class="tab-pane active" id="home" role="tabpanel">        
-        <div id="trans-wrapper"></div>
+        <div id="container" style="height: 100%;"></div>
       </div>      
     </div>
   </div>
