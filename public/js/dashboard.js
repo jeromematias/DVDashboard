@@ -43,7 +43,7 @@ $(function(){
 											'<td>'+ showeekday(data[i].WeekDay) +'</td>'+
 											'<td class="text-center">'+ data[i].MinsBefore +'</td>'+
 											'<td class="text-center">'+ data[i].MinsAfter +'</td>'+
-											'<td> <i class="icon-note float-right font-weight-bold text-primary" id="up-mina" data-value="'+ data[i].WeekDay +'"></td>'
+											'<td><i class="icon-note float-right font-weight-bold text-primary" data-toggle="modal" data-target="#modal-timeframe" id="up-minb" data-value="'+ data[i].WeekDay +'"></i></td>'
 					output += '</tr>'
 				}
 			}
