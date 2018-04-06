@@ -217,13 +217,7 @@ $(function(){
 			        data: xAxisData
 			    },
 			    yAxis: {
-			        data : seriesData,
-			        axisLabel: {
-			            inside: true,
-			            textStyle: {
-			                color: '#000'
-			            }
-			        },
+			        type: 'value',
 			    },
 			    series: [{
 			        data: seriesData,
