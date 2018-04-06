@@ -26,7 +26,7 @@ $(function(){
 		$.get(window.location.href + "timeframes",function(data){		
 			console.log(data)
 					//Conversion
-			var output = '<label class="col-md-9 col-form-label" for="tb-conversion">Conversion</label><table class="table table-bordered" id="tb-conversion">';
+			var output = '<label class="col-md-9 col-form-label" for="tb-conversion"><strong>Conversion</strong></label><table class="table table-bordered" id="tb-conversion">';
 					output += '<thead>'
 					output += '<tr>'+
 											'<th>TV weekday</th>'+
@@ -45,7 +45,7 @@ $(function(){
 			}
 					output += '</tbody></table>';
 					//validation
-					output += '<label class="col-md-9 col-form-label" for="tb-validation">validation</label><table class="table table-bordered" id="tb-validation">'
+					output += '<label class="col-md-9 col-form-label" for="tb-validation"><strong>Validation</strong></label><table class="table table-bordered" id="tb-validation">'
 					output += '<thead>'
 					output += '<tr>'+
 											'<th></th>'+
