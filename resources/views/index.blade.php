@@ -52,7 +52,18 @@
       </div>
       <!-- Modal body -->
       <div class="modal-body" style="height: calc(100% - 200px);">        
-
+        <div class="row">
+          <div class="form-group">
+            <label class="col-md-9 col-form-label" for="warningtime">Warning time</label>
+            <div class="col-md-9">
+              <input type="text" class="form-control" id="warningtime">
+            </div>
+            <label class="col-md-9 col-form-label" for="errortime">Error time</label>
+            <div class="col-md-9">
+              <input type="text" class="form-control" id="errortime">
+            </div>
+          </div>
+        </div>
       </div>
       <!-- Modal footer -->
       <div class="modal-footer bg-light">
