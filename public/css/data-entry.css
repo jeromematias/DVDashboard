@@ -1,0 +1,28 @@
+main{
+	overflow: hidden;
+}
+html,body {
+    height:100%;
+}
+
+.container-fluid .animated .row{
+	margin-top: 50px;
+}
+
+.container-fluid,
+.container-fluid .animated,
+.container-fluid .animated .row,
+.container-fluid .animated .row #tabs .tab-content{
+	height: 100%;
+}
+.container-fluid .animated .row #tabs{
+	height: calc(100% - 98px);	
+}
+.container-fluid .animated .row #tabs .tab-content .tab-pane ,
+.container-fluid .animated .row #tabs .tab-contet .tab-pane #trans-wrapper{
+	height: 100%;
+	overflow-y: auto;
+}
+.nav-pills .nav-item .nav-link.active{
+	
+}

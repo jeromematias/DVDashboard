@@ -1,0 +1,55 @@
+html,body {
+    height:100%;
+}
+.container-fluid,
+.container-fluid .animated,
+.container-fluid .animated .row{
+	height: 100%;
+}
+
+.container-fluid .animated .row .col-sm-12,
+.container-fluid .animated .row .col-sm-12 .card{
+	height: calc(100% - 15px);
+}
+.container-fluid .animated .row .col-sm-12 .card .card-body{
+	height: calc(100% - 50px);
+
+}
+.container-fluid .animated .row .col-sm-12 .card .card-body .row,
+.container-fluid .animated .row .col-sm-12 .card .card-body .row .col-sm-12,
+.container-fluid .animated .row .col-sm-12 .card .card-body .row .col-sm-12 #tabreport1,
+.container-fluid .animated .row .col-sm-12 .card .card-body .row .col-sm-12 #tabreport2,
+.container-fluid .animated .row .col-sm-12 .card .card-body .row .col-sm-12 #tabreport3,
+.container-fluid .animated .row .col-sm-12 .card .card-body .row .col-sm-12 #tabreport4,
+.container-fluid .animated .row .col-sm-12 .card .card-body .row .col-sm-12 #tabreport5,
+.container-fluid .animated .row .col-sm-12 .card .card-body .row .col-sm-12 #tabreport6,
+.container-fluid .animated .row .col-sm-12 .card .card-body .row .col-sm-12 #tabreport7{
+	height: calc(100% - 40px);
+}
+.container-fluid .animated .row .col-sm-12 .card .card-body .row .col-sm-12 #tabreport1 .tab-content,
+.container-fluid .animated .row .col-sm-12 .card .card-body .row .col-sm-12 #tabreport2 .tab-content,
+.container-fluid .animated .row .col-sm-12 .card .card-body .row .col-sm-12 #tabreport3 .tab-content,
+.container-fluid .animated .row .col-sm-12 .card .card-body .row .col-sm-12 #tabreport4 .tab-content,
+.container-fluid .animated .row .col-sm-12 .card .card-body .row .col-sm-12 #tabreport5 .tab-content,
+.container-fluid .animated .row .col-sm-12 .card .card-body .row .col-sm-12 #tabreport6 .tab-content,
+.container-fluid .animated .row .col-sm-12 .card .card-body .row .col-sm-12 #tabreport7 .tab-content{
+	height: calc(100% - 50px);	
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+.container-fluid .animated .row .col-sm-12 .card .card-body .row .col-sm-12 #tabreport1 .tab-content .tab-pane,
+.container-fluid .animated .row .col-sm-12 .card .card-body .row .col-sm-12 #tabreport2 .tab-content .tab-pane,
+.container-fluid .animated .row .col-sm-12 .card .card-body .row .col-sm-12 #tabreport3 .tab-content .tab-pane,
+.container-fluid .animated .row .col-sm-12 .card .card-body .row .col-sm-12 #tabreport4 .tab-content .tab-pane,
+.container-fluid .animated .row .col-sm-12 .card .card-body .row .col-sm-12 #tabreport5 .tab-content .tab-pane,
+.container-fluid .animated .row .col-sm-12 .card .card-body .row .col-sm-12 #tabreport6 .tab-content .tab-pane
+.container-fluid .animated .row .col-sm-12 .card .card-body .row .col-sm-12 #tabreport7 .tab-content .tab-pane{
+	vertical-align: middle;
+}
+#tabreport1,#tabreport2,#tabreport3,#tabreport4,#tabreport5,#tabreport6,#tabreport7,#tabreport8{
+	display: none;
+}
+
+div.table-resposive{
+	padding: 15px 15px 15px 15px;
+}
