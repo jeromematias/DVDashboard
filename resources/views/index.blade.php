@@ -42,7 +42,7 @@
 @stop
 @section('modals')
 <!-- The Modal -->
-<div class="modal fade" id="modal-timeframe" style="height : 100%;">
+<div class="modal fade" id="modal-timeframe" style="height : 40%;">
   <div class="modal-dialog" style="height : calc(100% - 150px);">
     <div class="modal-content" style="height : 100%;">
       <!-- Modal Header -->
@@ -51,7 +51,7 @@
         <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
       <!-- Modal body -->
-      <div class="modal-body" style="height: calc(50% - 200px);">        
+      <div class="modal-body" style="height: calc(100% - 200px);">        
 
       </div>
       <!-- Modal footer -->
