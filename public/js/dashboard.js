@@ -221,7 +221,13 @@ $(function(){
 			    },
 			    series: [{
 			        data: seriesData,
-			        type: 'bar'
+			        type: 'bar',
+			        label: {
+	                normal: {
+	                    show: true,
+	                    position: 'inside'
+	                }
+	            }
 			    }]
 			};
 			echartBar.setOption(option);	
