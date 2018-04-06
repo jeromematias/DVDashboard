@@ -51,7 +51,7 @@
         <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
       <!-- Modal body -->
-      <div class="modal-body" style="height: calc(100% - 200px);">        
+      <div class="modal-body" style="height: calc(50% - 200px);">        
 
       </div>
       <!-- Modal footer -->
