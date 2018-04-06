@@ -109,9 +109,15 @@
 
       <!-- Tab panes -->
       <div class="tab-content">
-
-        <div class="tab-pane p-3 active" id="timeline" role="tabpanel">
-          <!---->
+        <div class="tab-pane p-3 active" id="timeline" role="tabpanel">          
+          <div class="form-group">
+            <label class="col-md-9 col-form-label" for="select2">Select Survey Name</label>
+            <div class="col-md-9">
+              <select id="select2" name="select2" class="form-control">
+                <option value="0">Loading Survey Names...</option>                
+              </select>
+            </div>
+          </div>
         </div>
       </div>
     </aside>
