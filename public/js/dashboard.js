@@ -95,8 +95,7 @@ $(function(){
 				$(this).click(function(){
 					weekday = $(this).data('value');					
 					$('#modal-timeframe').modal({
-						backdrop: 'static',
-    				keyboard: false
+						keyboard: false
 					})
 				})
 				$(this).css({
