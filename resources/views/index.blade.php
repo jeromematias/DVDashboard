@@ -111,6 +111,7 @@
 <script type="text/javascript" src="js/dataTables.bootstrap4.min.js"></script>
 <script type="text/javascript" src="js/jQuery.print.js"></script>
 <script type="text/javascript" src="js/jquery.floatThead.min.js"></script>
+<script type="text/javascript" src="js/echarts3.js"></script>
 <script type="text/javascript" src="js/modules.js"></script>
 <script type="text/javascript" src="js/dashboard.js"></script>
 @stop
