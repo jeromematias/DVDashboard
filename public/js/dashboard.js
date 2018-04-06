@@ -32,8 +32,8 @@ $(function(){
 					output += '<thead>'
 					output += '<tr>'+
 											'<th>TV weekday</th>'+
-											'<th class="text-center">Warning time MAM(MinsBefore)</th>'+
-											'<th class="text-center">Error time MAM(MinsAfter)</th>';
+											'<th class="text-center">Warning time MAM</th>'+
+											'<th class="text-center">Error time MAM</th>';
 					output += '</tr>'
 					output += '</thead><tbody class="table-sm">'
 			for(var i in data){
