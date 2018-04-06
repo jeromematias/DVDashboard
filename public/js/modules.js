@@ -5,3 +5,15 @@ $.fn.appendSurvey = function(Survey){
 		$(self).append('<li class="nav-item"><a class="nav-link" href="#"><i class="icon-plus text-success font-weight-bold"></i> '+ surveyname +'</a></li>')
 	}
 }
+$.fn.appendSurveyOption = function(Survey){
+	var self = this;	
+	$(self).find('option')
+    .remove()
+    .end();
+	for(var i in Survey.Surveylist){
+		var surveyname = Survey.Surveylist[i]
+		$(self).find('option')
+	    .append('<option value="'+ surveyname +'">' + surveyname + '</option>')
+	    .end();
+	}
+}

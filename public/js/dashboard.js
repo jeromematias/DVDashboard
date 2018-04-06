@@ -8,5 +8,8 @@ $(function(){
 		$('#surveylist').appendSurvey({
 			Surveylist : Surveylist
 		})
+		$('#surveynames').appendSurveyOption({
+			Surveylist : Surveylist
+		})
 	})		
 });

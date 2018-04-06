@@ -113,8 +113,8 @@
           <div class="form-group">
             <label class="col-md-9 col-form-label" for="select2">Select Survey Name</label>
             <div class="col-md-9">
-              <select id="select2" name="select2" class="form-control">
-                <option value="0">Loading Survey Names...</option>                
+              <select id="surveynames" name="surveynames" class="form-control">
+                <option value="">Loading Survey Names...</option>                
               </select>
             </div>
           </div>
