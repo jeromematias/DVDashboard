@@ -42,12 +42,14 @@
 @stop
 @section('modals')
 <!-- The Modal -->
+
+<!--conversion-->
 <div class="modal fade" id="modal-timeframe" style="height : 50%;">
   <div class="modal-dialog modal-md" style="height : calc(100% - 150px);">
     <div class="modal-content" style="height : 100%;">
       <!-- Modal Header -->
       <div class="modal-header bg-success">
-        <strong class="modal-title text-dark">Update</strong>
+        <strong class="modal-title text-dark">Update Conversion</strong>
         <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
       <!-- Modal body -->
@@ -71,6 +73,38 @@
     </div>
   </div>
 </div>
+
+<!-- validation -->
+<div class="modal fade" id="modal-validation" style="height : 50%;">
+  <div class="modal-dialog modal-md" style="height : calc(100% - 150px);">
+    <div class="modal-content" style="height : 100%;">
+      <!-- Modal Header -->
+      <div class="modal-header bg-success">
+        <strong class="modal-title text-dark">Update Validation</strong>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <!-- Modal body -->
+      <div class="modal-body" style="height: 100%;">        
+        <div class="form-group">
+          <label class="col-md-9 col-form-label" for="validationwarning"><strong>Warning time</strong></label>
+          <div class="col-md-12">
+            <input type="text" class="form-control" id="validationwarning">
+          </div>
+          <label class="col-md-9 col-form-label" for="validationerror"><strong>Error time</strong></label>
+          <div class="col-md-12">
+            <input type="text" class="form-control" id="validationerror">
+          </div>
+        </div>
+      </div>
+      <!-- Modal footer -->
+      <div class="modal-footer bg-light">
+        <button type="button" class="btn btn-light" id="savetimeframe">Save</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
 @stop
 @section('script')
 <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>

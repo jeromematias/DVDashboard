@@ -7,6 +7,7 @@ $(function(){
 	var Surveylist = [];
 	var Validationlist = [];
 	var weekday;
+	var validationsurveyname;
 	$.get(window.location.href + "Surveys",function(data){
 		console.log(data)		
 		for(var i in data){
@@ -76,7 +77,8 @@ $(function(){
 					output += '<thead>'
 					output += '<tr>'+
 											'<th class="text-center">Warning Minutes after Conversion</th>'+
-											'<th class="text-center">Error Minutes after Conversion</th>';
+											'<th class="text-center">Error Minutes after Conversion</th>'+
+											'<th>Update</th>';
 					output += '</tr>'
 					output += '</thead><tbody class="table-sm">'
 					for(var i in Validationlist){
@@ -84,6 +86,7 @@ $(function(){
 							output += '<tr>'+
 												'<td class="text-center">'+ Validationlist[i].Warning +'</td>'+
 												'<td class="text-center">'+ Validationlist[i].Error +'</td>';
+												'<td><i class="icon-note float-right font-weight-bold text-primary" id="up-validation" data-value="'+ $('#surveynames').val() +'"></i></td>'
 							output += '</tr>'
 						}
 					}
@@ -103,6 +106,22 @@ $(function(){
 					cursor : 'pointer'
 				})
 			})
+
+
+			$('#tb-validation tbody tr td #up-validation').each(function(){
+				$(this).click(function(){
+					validationsurveyname = $(this).data('value');					
+					$('#modal-validation').modal({
+						backdrop: 'static',
+    				keyboard: false
+					})
+				})
+				$(this).css({
+					cursor : 'pointer'
+				})
+			})
+
+
 		}).done(function(){
 			
 		})	
