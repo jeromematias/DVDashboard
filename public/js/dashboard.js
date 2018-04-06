@@ -22,6 +22,7 @@ $(function(){
 	}).done(function(){
 		init_surveynames();
 		showTimeFrames();
+		showvalidation();
 	})
 	
 	$('#savetimeframe').click(function(){
@@ -46,7 +47,7 @@ $(function(){
 			validationerror : $('#validationerror').val()
 		}
 		$.get(window.location.href + "updatesurvey",request,function(response){
-			showTimeFrames();
+			showvalidation();
 			$('#validationwarning').val('')
 			$('#validationerror').val('')
 			bootbox.alert("Survey validation successfully updated!");			
@@ -62,7 +63,7 @@ $(function(){
 					
 
 					//Conversion
-			var output = '<label class="col-md-9 col-form-label" for="tb-conversion"><strong>Conversion</strong></label><table class="table table-bordered" id="tb-conversion">';
+			var output = '<table class="table table-bordered" id="tb-conversion">';
 					output += '<thead>'
 					output += '<tr>'+
 											'<th>TV weekday</th>'+
@@ -82,27 +83,7 @@ $(function(){
 				}
 			}
 					output += '</tbody></table>';
-					
-
-					//validation
-					output += '<label class="col-md-9 col-form-label" for="tb-validation"><strong>Validation</strong></label><table class="table table-bordered" id="tb-validation">'
-					output += '<thead>'
-					output += '<tr>'+
-											'<th class="text-center">Warning Minutes after Conversion</th>'+
-											'<th class="text-center">Error Minutes after Conversion</th>'+
-											'<th>Update</th>';
-					output += '</tr>'
-					output += '</thead><tbody class="table-sm">'
-					for(var i in Validationlist){
-						if($('#surveynames').val() == Validationlist[i].SurveyName){
-							output += '<tr>'+
-												'<td class="text-center">'+ Validationlist[i].Warning +'</td>'+
-												'<td class="text-center">'+ Validationlist[i].Error +'</td>'+
-												'<td><i class="icon-note float-right font-weight-bold text-primary" id="up-validation" data-value="'+ $('#surveynames').val() +'"></i></td>';
-							output += '</tr>'
-						}
-					}
-					output += '</tbody></table>';
+										
 					//Validationlist
 			$('#timeframewrapper').html(output);	
 
@@ -118,20 +99,7 @@ $(function(){
 					cursor : 'pointer'
 				})
 			})
-
-
-			$('#tb-validation tbody tr td #up-validation').each(function(){
-				$(this).click(function(){
-					validationsurveyname = $(this).data('value');					
-					$('#modal-validation').modal({
-						backdrop: 'static',
-    				keyboard: false
-					})
-				})
-				$(this).css({
-					cursor : 'pointer'
-				})
-			})
+			
 
 
 		}).done(function(){
@@ -139,6 +107,45 @@ $(function(){
 		})	
 	}
 
+	function showvalidation(){
+		$.get(window.location.href + "Surveys",function(data){
+			//validation
+			var output += '<table class="table table-bordered" id="tb-validation">'
+			output += '<thead>'
+			output += '<tr>'+
+									'<th class="text-center">Warning Minutes after Conversion</th>'+
+									'<th class="text-center">Error Minutes after Conversion</th>'+
+									'<th>Update</th>';
+			output += '</tr>'
+			output += '</thead><tbody class="table-sm">'
+			
+			for(var i in Validationlist){
+				if($('#surveynames').val() == Validationlist[i].SurveyName){
+					output += '<tr>'+
+										'<td class="text-center">'+ Validationlist[i].Warning +'</td>'+
+										'<td class="text-center">'+ Validationlist[i].Error +'</td>'+
+										'<td><i class="icon-note float-right font-weight-bold text-primary" id="up-validation" data-value="'+ $('#surveynames').val() +'"></i></td>';
+					output += '</tr>'
+				}
+			}
+			output += '</tbody></table>';
+		})
+		
+		$('#vaildationwrapper').html(output);	
+
+		$('#tb-validation tbody tr td #up-validation').each(function(){
+			$(this).click(function(){
+				validationsurveyname = $(this).data('value');					
+				$('#modal-validation').modal({
+					backdrop: 'static',
+  				keyboard: false
+				})
+			})
+			$(this).css({
+				cursor : 'pointer'
+			})
+		})
+	}
 	function showeekday(num){
 		switch(Number(num)){
 			case 1 : 
@@ -177,6 +184,7 @@ $(function(){
 		})
 		$('#surveynames').on('change', function() {
 			showTimeFrames()
+			showvalidation()
 		})
 	}		
 });

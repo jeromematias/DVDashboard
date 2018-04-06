@@ -121,7 +121,10 @@
             </div>
             <div class="form-group col-sm-12">
               <div class="col-md-12">
+                <label class="col-md-9 col-form-label" for="tb-conversion"><strong>Conversion</strong></label>
                 <div class="table-responsive" id="timeframewrapper"></div>
+                <label class="col-md-9 col-form-label" for="tb-validation"><strong>Validation</strong></label>
+                <div class="table-responsive" id="vaildationwrapper"></div>
               </div>
             </div>
           </div>
