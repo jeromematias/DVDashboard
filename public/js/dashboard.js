@@ -33,17 +33,17 @@ $(function(){
 					output += '<tr>'+
 											'<th>TV weekday</th>'+
 											'<th class="text-center">Warning time MAM</th>'+
-											'<th class="text-center">Error time MAM</th>';
+											'<th class="text-center">Error time MAM</th>'+
+											'<th>Update</th>';
 					output += '</tr>'
 					output += '</thead><tbody class="table-sm">'
 			for(var i in data){
 				if($('#surveynames').val() == data[i].SurveyName){
 					output += '<tr>'+
 											'<td>'+ showeekday(data[i].WeekDay) +'</td>'+
-											'<td class="text-center">'+ data[i].MinsBefore +
-											' <i class="icon-note float-right font-weight-bold text-primary" data-toggle="modal" data-target="#modal-timeframe" id="up-minb" data-value="'+ data[i].WeekDay +'"></i></td>'+
-											'<td class="text-center">'+ data[i].MinsAfter +
-											' <i class="icon-note float-right font-weight-bold text-primary" id="up-mina" data-value="'+ data[i].WeekDay +'"></td>';
+											'<td class="text-center">'+ data[i].MinsBefore +'</td>'+
+											'<td class="text-center">'+ data[i].MinsAfter +'</td>'+
+											'<td> <i class="icon-note float-right font-weight-bold text-primary" id="up-mina" data-value="'+ data[i].WeekDay +'"></td>'
 					output += '</tr>'
 				}
 			}
