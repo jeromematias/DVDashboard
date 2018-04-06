@@ -16,3 +16,5 @@ Route::get('/', function () {
 });
 
 Route::get('/Surveys','dbcontroller@getSurveys');
+
+Route::get('/timeframes','dbcontroller@GetSurveyTimeFrames');
