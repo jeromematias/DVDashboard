@@ -1,6 +1,7 @@
 $(function(){
 	var Surveylist = [];
 	var Validationlist = [];
+	var weekday;
 	$.get(window.location.href + "Surveys",function(data){
 		console.log(data)		
 		for(var i in data){
@@ -17,7 +18,9 @@ $(function(){
 		showTimeFrames();
 	})
 	
-
+	$('#savetimeframe').click(function(){
+		alert($('#surveynames').val() +"/"+ weekday + "/" + $('#warningtime').val() + "/" + $('#errortime').val())
+	})
 	/**
 	 * [showTimeFrames description]
 	 * @return {[type]} [description]
@@ -72,7 +75,7 @@ $(function(){
 
 			$('#tb-conversion tbody tr td #up-minb').each(function(){
 				$(this).click(function(){
-					//alert($(this).data('value'))
+					weekday = $(this).data('value');					
 					$('#modal-timeframe').modal({
 						backdrop: 'static',
     				keyboard: false

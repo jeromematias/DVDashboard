@@ -54,18 +54,18 @@
       <div class="modal-body" style="height: 100%;">        
         <div class="form-group">
           <label class="col-md-9 col-form-label" for="warningtime"><strong>Warning time</strong></label>
-          <div class="col-md-9">
+          <div class="col-md-12">
             <input type="text" class="form-control" id="warningtime">
           </div>
           <label class="col-md-9 col-form-label" for="errortime"><strong>Error time</strong></label>
-          <div class="col-md-9">
+          <div class="col-md-12">
             <input type="text" class="form-control" id="errortime">
           </div>
         </div>
       </div>
       <!-- Modal footer -->
       <div class="modal-footer bg-light">
-        <button type="button" class="btn btn-light">Save</button>
+        <button type="button" class="btn btn-light" id="savetimeframe">Save</button>
       </div>
 
     </div>
