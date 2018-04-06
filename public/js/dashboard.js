@@ -19,7 +19,18 @@ $(function(){
 	})
 	
 	$('#savetimeframe').click(function(){
-		alert($('#surveynames').val() +"/"+ weekday + "/" + $('#warningtime').val() + "/" + $('#errortime').val())
+		//alert($('#surveynames').val() +"/"+ weekday + "/" + $('#warningtime').val() + "/" + $('#errortime').val())
+		//$r->SurveyName,$r->WeekNum,$r->WarningTime,$r->ErrorTime
+		var request = {
+			SurveyName : $('#surveynames').val(),
+			WeekNum : weekday,
+			WarningTime : $('#warningtime').val(),
+			ErrorTime : $('#errortime').val()
+		}
+		$.post(window.location.href + "UpdateSurveyTimeFrame",request,function(response){
+			console.log(response)
+			showTimeFrames();
+		})
 	})
 	/**
 	 * [showTimeFrames description]

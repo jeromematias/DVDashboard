@@ -10,6 +10,7 @@ class dbcontroller extends Controller
 	
 	protected $surveylist = array();
 	protected $timeframes = array();
+	protected $UpdateSurveyTimeFrame = array();
 	/**
 	 * [__construct description]
 	 */
@@ -29,6 +30,11 @@ class dbcontroller extends Controller
   public function GetSurveyTimeFrames(){
   	$this->timeframes = DB::select('EXEC GetSurveyTimeFrames');
     return response($this->timeframes);
+  }
+
+  public function UpdateSurveyTimeFrame(Request $r){
+  	$this->UpdateSurveyTimeFrame = DB::select('EXEC UpdateSurveyTimeFrame ?, ?, ?, ?',array($r->SurveyName,$r->WeekNum,$r->WarningTime,$r->ErrorTime));
+  	return response('update success');
   }
 
 }
