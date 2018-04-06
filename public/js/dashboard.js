@@ -10,8 +10,6 @@ $(function(){
 		})
 		$('#surveynames').appendSurveyOption({
 			Surveylist : Surveylist
-		}).done(function(){
-			console.log('done')
 		})
 	})		
 });
