@@ -51,7 +51,7 @@
         <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
       <!-- Modal body -->
-      <div class="modal-body" style="height: calc(100% - 200px);">        
+      <div class="modal-body" style="height: 100%;">        
         <div class="row">
           <div class="form-group">
             <label class="col-md-9 col-form-label" for="warningtime">Warning time</label>
