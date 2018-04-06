@@ -25,8 +25,6 @@ $(function(){
 	})
 	
 	$('#savetimeframe').click(function(){
-		//alert($('#surveynames').val() +"/"+ weekday + "/" + $('#warningtime').val() + "/" + $('#errortime').val())
-		//$r->SurveyName,$r->WeekNum,$r->WarningTime,$r->ErrorTime
 		var request = {
 			SurveyName : $('#surveynames').val(),
 			WeekNum : weekday,
@@ -39,6 +37,20 @@ $(function(){
 			$('#errortime').val('')			
 			bootbox.alert("Timeframe successfully updated!");			
 		})
+	})
+
+	$('#savevalidation').click(function(){
+		var request = {
+			SurveyName : $('#surveynames').val(),			
+			validationwarning : $('#validationwarning').val(),
+			validationerror : $('#validationerror').val()
+		}
+		$.get(window.location.href + "updatesurvey",request,function(response){
+			showTimeFrames();
+			$('#validationwarning').val('')
+			$('#validationerror').val('')
+			bootbox.alert("Survey validation successfully updated!");			
+		})		
 	})
 	/**
 	 * [showTimeFrames description]

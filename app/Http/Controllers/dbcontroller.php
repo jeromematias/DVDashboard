@@ -40,4 +40,10 @@ class dbcontroller extends Controller
   	return response('success');
   }
 
+  public function UpdateSurveyValidatetimings(){  	
+  	DB::table('Surveys')
+            ->where('SurveyName', $r->SurveyName)            
+            ->update(['MinsValidationWarning' => $r->validationwarning,'MinsValidationError' => $r->validationerror]);
+  	return response('success');
+  }  
 }

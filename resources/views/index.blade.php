@@ -98,7 +98,7 @@
       </div>
       <!-- Modal footer -->
       <div class="modal-footer bg-light">
-        <button type="button" class="btn btn-light" id="savetimeframe">Save</button>
+        <button type="button" class="btn btn-light" id="savevalidation">Save</button>
       </div>
 
     </div>
