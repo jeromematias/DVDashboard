@@ -35,7 +35,7 @@ $(function(){
 											'<th class="text-center">Warning time MAM(MinsBefore)</th>'+
 											'<th class="text-center">Error time MAM(MinsAfter)</th>';
 					output += '</tr>'
-					output += '</thead><tbody>'
+					output += '</thead><tbody class="table-sm">'
 			for(var i in data){
 				if($('#surveynames').val() == data[i].SurveyName){
 					output += '<tr>'+
@@ -55,7 +55,7 @@ $(function(){
 											'<th class="text-center">Warning Minutes after Conversion</th>'+
 											'<th class="text-center">Error Minutes after Conversion</th>';
 					output += '</tr>'
-					output += '</thead><tbody>'
+					output += '</thead><tbody class="table-sm">'
 					for(var i in Validationlist){
 						if($('#surveynames').val() == Validationlist[i].SurveyName){
 							output += '<tr>'+
