@@ -32,7 +32,7 @@ $(function(){
 			WarningTime : $('#warningtime').val(),
 			ErrorTime : $('#errortime').val()
 		}
-		$.get(window.location.href + "updatetimeframe",request,function(response){
+		$.post(window.location.href + "updatetimeframe",request,function(response){
 			console.log(response)
 			showTimeFrames();
 		})
