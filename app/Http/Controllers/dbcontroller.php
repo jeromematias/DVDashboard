@@ -33,7 +33,7 @@ class dbcontroller extends Controller
   }
 
   public function UpdateSurveyTimeFrame(Request $r){
-  	DB::select('SET ANSI_NULLS ON; SET ANSI_WARNINGS ON; EXEC UpdateSurveyTimeFrame ?, ?, ?, ?',array($r->SurveyName,$r->WeekNum,$r->WarningTime,$r->ErrorTime));
+  	DB::raw('SET ANSI_NULLS ON; SET ANSI_WARNINGS ON; EXEC UpdateSurveyTimeFrame ?, ?, ?, ?',array($r->SurveyName,$r->WeekNum,$r->WarningTime,$r->ErrorTime));
   	return response('update success');
   }
 
