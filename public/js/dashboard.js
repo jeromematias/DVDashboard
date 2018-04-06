@@ -7,7 +7,7 @@ $(function(){
 		}
 	}).done(function(){
 		$('#surveylist').appendSurvey({
-			Surveylist : ['Singtel Cencus','Singtel NewsRoom','Digiturk','SKY UK Cencus']
+			Surveylist : Surveylist
 		})
 	})		
 });
