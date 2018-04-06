@@ -1,9 +1,16 @@
 $(function(){
 	var Surveylist = [];
+	var Validationlist = [];
 	$.get(window.location.href + "Surveys",function(data){
 		console.log(data)		
 		for(var i in data){
 			Surveylist.push(data[i].SurveyName)
+			Validationlist.push({
+				SurveyName : data[i].SurveyName,
+				SurveyCode : data[i].SurveyCode,
+				Warning : data[i].MinsValidationWarning,
+				Error : data[i].MinsValidationError,
+			})
 		}
 	}).done(function(){
 		init_surveynames();
@@ -18,7 +25,8 @@ $(function(){
 	function showTimeFrames(){
 		$.get(window.location.href + "timeframes",function(data){		
 			console.log(data)
-			var output = '<table class="table table-bordered">';
+					//Conversion
+			var output = '<label class="col-md-9 col-form-label" for="tb-conversion">Conversion</label><table class="table table-bordered" id="tb-conversion">';
 					output += '<thead>'
 					output += '<tr>'+
 											'<th>TV weekday</th>'+
@@ -36,6 +44,24 @@ $(function(){
 				}
 			}
 					output += '</tbody></table>';
+					//validation
+					output += '<label class="col-md-9 col-form-label" for="tb-validation">validation</label><table class="table table-bordered" id="tb-validation">'
+					output += '<thead>'
+					output += '<tr>'+
+											'<th></th>'+
+											'<th class="text-center">Warning Minutes after Conversion</th>'+
+											'<th class="text-center">Error Minutes after Conversion</th>';
+					output += '</tr>'
+					output += '</thead><tbody>'
+					for(var i Validationlist){
+						output += '<tr>'+
+											'<td></td>'+
+											'<td class="text-center">'+ Validationlist[i].Warning +'</td>'+
+											'<td class="text-center">'+ Validationlist[i].Error +'</td>';
+						output += '</tr>'
+					}
+					output += '</tbody></table>';
+					//Validationlist
 			$('#timeframewrapper').html(output);			
 		}).done(function(){
 			
