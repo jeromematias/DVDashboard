@@ -224,9 +224,12 @@ $(function(){
 			        type: 'bar',
 			        label: {
 	                normal: {
-	                    show: true,
-	                    position: 'insideTop',
-	                    color : '#000'
+                    show: true,
+                    position: 'insideTop',
+                    color : '#000'
+	                },
+	                emphasis : {
+	                	color : '#000'
 	                }
 	            }
 			    }]
