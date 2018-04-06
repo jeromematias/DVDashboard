@@ -32,7 +32,6 @@
         <a class="nav-link active" data-toggle="tab" href="#home" role="tab" aria-controls="home">Survey : Singtel Cencus</a>
       </li>      
     </ul>
-
     <div class="tab-content">
       <div class="tab-pane active" id="home" role="tabpanel">        
         <div id="trans-wrapper"></div>
@@ -46,16 +45,13 @@
 <div class="modal fade" id="respondent-mod" style="height : 100%;">
   <div class="modal-dialog modal-xl" style="height : calc(100% - 150px);">
     <div class="modal-content" style="height : 100%;">
-
       <!-- Modal Header -->
       <div class="modal-header bg-danger">
         <h4 class="modal-title">Households Information</h4>
         <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
-
       <!-- Modal body -->
-      <div class="modal-body" style="height: calc(100% - 200px);">
-        
+      <div class="modal-body" style="height: calc(100% - 200px);">        
         <div class="row" style="height: 100%">
           <div class="col" style="height: 100%">
             <ul class="nav nav-pills mb-1" id="pills-tab" role="tablist">              
@@ -81,10 +77,8 @@
               </div>
             </div>
           </div>
-        </div>
-      
+        </div>      
       </div>
-
       <!-- Modal footer -->
       <div class="modal-footer bg-light">
         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
@@ -100,4 +94,6 @@
 <script type="text/javascript" src="js/dataTables.bootstrap4.min.js"></script>
 <script type="text/javascript" src="js/jQuery.print.js"></script>
 <script type="text/javascript" src="js/jquery.floatThead.min.js"></script>
+<script type="text/javascript" src="js/modules.js"></script>
+<script type="text/javascript" src="js/dashboard.js"></script>
 @stop
