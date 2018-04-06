@@ -43,7 +43,7 @@
 @section('modals')
 <!-- The Modal -->
 <div class="modal fade" id="modal-timeframe" style="height : 40%;">
-  <div class="modal-dialog" style="height : calc(100% - 150px);">
+  <div class="modal-dialog modal-md" style="height : calc(100% - 150px);">
     <div class="modal-content" style="height : 100%;">
       <!-- Modal Header -->
       <div class="modal-header bg-danger">
