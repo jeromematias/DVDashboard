@@ -103,19 +103,21 @@
     <aside class="aside-menu">
       <ul class="nav nav-tabs" role="tablist">
         <li class="nav-item">
-          <a class="nav-link active text-dark" data-toggle="tab" href="#timeline" role="tab"><i class="icon-list"></i> Setup</a>
+          <a class="nav-link active text-dark" data-toggle="tab" href="#setup" role="tab"><i class="icon-list"></i> Setup</a>
         </li>        
       </ul>
 
       <!-- Tab panes -->
       <div class="tab-content">
-        <div class="tab-pane p-3 active" id="timeline" role="tabpanel">          
-          <div class="form-group">
-            <label class="col-md-9 col-form-label" for="select2">Select Survey Name</label>
-            <div class="col-md-9">
-              <select id="surveynames" name="surveynames" class="form-control">
-                <option value="">Loading Survey Names...</option>                
-              </select>
+        <div class="tab-pane p-3 active" id="setup" role="tabpanel">          
+          <div class="row">
+            <div class="form-group">
+              <label class="col-md-9 col-form-label" for="select2">Select Survey Name</label>
+              <div class="col-md-9">
+                <select id="surveynames" name="surveynames" class="form-control">
+                  <option value="">Loading Survey Names...</option>                
+                </select>
+              </div>
             </div>
           </div>
         </div>
