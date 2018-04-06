@@ -52,16 +52,14 @@
       </div>
       <!-- Modal body -->
       <div class="modal-body" style="height: 100%;">        
-        <div class="row">
-          <div class="form-group">
-            <label class="col-md-9 col-form-label" for="warningtime">Warning time</label>
-            <div class="col-md-9">
-              <input type="text" class="form-control" id="warningtime">
-            </div>
-            <label class="col-md-9 col-form-label" for="errortime">Error time</label>
-            <div class="col-md-9">
-              <input type="text" class="form-control" id="errortime">
-            </div>
+        <div class="form-group">
+          <label class="col-md-9 col-form-label" for="warningtime">Warning time</label>
+          <div class="col-md-9">
+            <input type="text" class="form-control" id="warningtime">
+          </div>
+          <label class="col-md-9 col-form-label" for="errortime">Error time</label>
+          <div class="col-md-9">
+            <input type="text" class="form-control" id="errortime">
           </div>
         </div>
       </div>
