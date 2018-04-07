@@ -12,6 +12,7 @@ class dbcontroller extends Controller
 	protected $timeframes = array();
 	protected $UpdateSurveyTimeFrame = array();
 	protected $difference = array();
+	protected $GetStatus = array();
 	/**
 	 * [__construct description]
 	 */
@@ -51,5 +52,9 @@ class dbcontroller extends Controller
   public function GetDiff(Request $r){  	
   	$this->difference = DB::select('EXEC GetDiff ?, ?, ?',array($r->SurveyName,$r->Unit,$r->Days));
   	return response($this->difference);
+  }
+
+  public function GetStatus(Request $r){
+  	$this->GetStatus = DB::select('EXEC GetStatus ?, ?',array($r->SurveyName,$r->Unit));
   }  
 }

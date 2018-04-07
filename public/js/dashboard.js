@@ -47,6 +47,11 @@ $(function(){
 		$('#surveylist .nav-link').css({
 			cursor : 'pointer'
 		})
+
+		setInterval(checkStatus, 1*1000);
+		function checkStatus(){
+			console.log('test')
+		}
 	})
 	$('#container').bind('resize', function(e) {	   
 	   echartBar.resize();
