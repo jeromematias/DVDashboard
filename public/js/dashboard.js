@@ -108,7 +108,7 @@ $(function(){
 											'<td>'+ showeekday(data[i].WeekDay) +'</td>'+
 											'<td class="text-center">'+ data[i].MinsBefore +'</td>'+
 											'<td class="text-center">'+ data[i].MinsAfter +'</td>'+
-											'<td><i class="icon-note float-right font-weight-bold text-primary" id="up-minb" data-value="'+ data[i].WeekDay +'"></i></td>'
+											'<td><i class="icon-note float-right font-weight-bold text-primary" id="up-minb" data-id="'+ data[i].MinsBefore +'" value="'+ data[i].MinsAfter +'" data-value="'+ data[i].WeekDay +'"></i></td>'
 					output += '</tr>'
 				}
 			}
@@ -123,7 +123,9 @@ $(function(){
 					$('#modal-timeframe').modal({
 						backdrop: 'static',
     				keyboard: false
-					})
+					});
+					$('#warningtime').val($(this).data('id'));
+					$('#errortime').val($(this).attr('value'));			
 				})
 				$(this).css({
 					cursor : 'pointer'
