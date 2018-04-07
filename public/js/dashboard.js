@@ -61,6 +61,7 @@ $(function(){
 				$('#val-date').text("Last date loaded : "+response[0].LatestDataDate)
 				$('#val-status').text("Manual : "+response[0].ProcessName)
 			})
+			updategraph();
 		}
 	})
 	$('#container').bind('resize', function(e) {	   
