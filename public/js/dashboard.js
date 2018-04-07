@@ -77,7 +77,7 @@ $(function(){
 			})
 		}else{
 			bootbox.alert('Please make sure Warning Time and Error Time is numeric or not empty!')
-		}		
+		}
 	})
 
 	$('#savevalidation').click(function(){
@@ -102,7 +102,7 @@ $(function(){
 	})
 
 	function updategraph(){
-		$.get(window.location.href + 'graph',{SurveyName:graphsurveyname,Unit:$('#unit').val(),Days:$('days').val()},function(data){
+		$.get(window.location.href + 'graph',{SurveyName:graphsurveyname,Unit:$('#unit').val(),Days:$('#days').val()},function(data){
 			var arr = [];
 			for(var i in data){						
 				arr.push(data[i].OffSet)						
