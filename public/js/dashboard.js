@@ -93,7 +93,9 @@ $(function(){
 				$('#modal-timeframe').modal('hide');
 				bootbox.alert("Timeframe successfully updated!");							
 			}).done(function(){
-				updategraph()
+				if($('#surveynames').val() == graphsurveyname){
+					updategraph()
+				}				
 			})
 		}else{
 			bootbox.alert('Please make sure Warning Time and Error Time is numeric or not empty!')
@@ -114,7 +116,9 @@ $(function(){
 				$('#modal-validation').modal('hide');
 				bootbox.alert("Survey validation successfully updated!");			
 			}).done(function(){
-				updategraph();
+				if($('#surveynames').val() == graphsurveyname){
+					updategraph();
+				}
 			})	
 		}else{
 			bootbox.alert('Please make sure Warning Time and Validation Warning Minute and Error Minute is numeric or not empty!')
