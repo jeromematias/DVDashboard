@@ -11,8 +11,7 @@ $(function(){
 	var graphsurveyname;
 	var arrSurvey = [];
 	var echartBar;
-	$.get(window.location.href + "Surveys",function(data){
-		console.log(data)		
+	$.get(window.location.href + "Surveys",function(data){		
 		for(var i in data){
 			if(i == 0){
 				graphsurveyname = data[i].SurveyName;
@@ -129,10 +128,7 @@ $(function(){
 	 * @return {[type]} [description]
 	 */	
 	function showTimeFrames(){
-		$.get(window.location.href + "timeframes",function(data){		
-			console.log(data)
-					
-
+		$.get(window.location.href + "timeframes",function(data){					
 					//Conversion
 			var output = '<table class="table table-bordered" id="tb-conversion">';
 					output += '<thead>'
@@ -264,8 +260,7 @@ $(function(){
 	}
 
 	function init_graph(SurveyName,Unit,Days){
-		$.get(window.location.href + 'graph',{SurveyName:SurveyName,Unit:Unit,Days:Days},function(data){
-			console.log(data)
+		$.get(window.location.href + 'graph',{SurveyName:SurveyName,Unit:Unit,Days:Days},function(data){			
 			var xAxisData = [];
 			var seriesData = [];
 			for(var i in data){
