@@ -54,13 +54,17 @@ $(function(){
 				console.log(response)
 				$('#con-date').text("Last date loaded : "+response[0].LatestDataDate)
 				$('#con-status').text(response[0].ProcessName)				
-				$('#breadcrumb1').css("background-color", response[0].ColorCode)
+				$('#breadcrumb1').css({
+					backgroundColor : response[0].ColorCode
+				})
 			})
 			$.get(window.location.href+'status',{SurveyName:graphsurveyname,Unit:2},function(response){
 				console.log(response)
 				$('#val-date').text("Last date loaded : "+response[0].LatestDataDate)
 				$('#val-status').text("Manual : "+response[0].ProcessName)
-				$('#breadcrumb2').css("background-color", '#000')
+				$('#breadcrumb2').css({
+					backgroundColor : response[0].ColorCode
+				})
 			})
 			updategraph();
 		}
