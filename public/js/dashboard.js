@@ -47,7 +47,7 @@ $(function(){
 		$('#surveylist .nav-link').css({
 			cursor : 'pointer'
 		})
-
+		checkStatus();
 		setInterval(checkStatus, 60*1000);
 		function checkStatus(){
 			$.get(window.location.href+'status',{SurveyName:graphsurveyname,Unit:1},function(response){
