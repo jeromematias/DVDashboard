@@ -44,13 +44,7 @@ $(function(){
 	$('#container').bind('resize', function(e) {	   
 	   echartBar.resize();
 	   console.log('test')
-	});
-	window.resize(function(){
-		echartBar.resize();
-	})
-	function appendContent($div, content) {
-   $div.append(content).trigger($.Event('resize'));
-	}
+	});	
 	
 	$('#savetimeframe').click(function(){
 		var request = {
