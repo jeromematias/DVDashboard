@@ -9,6 +9,7 @@ $(function(){
 	var weekday;
 	var validationsurveyname;
 	var graphsurveyname;
+	var arrSurvey;
 	var echartBar;
 	$.get(window.location.href + "Surveys",function(data){
 		console.log(data)		
@@ -70,7 +71,9 @@ $(function(){
 				$('#warningtime').val('')
 				$('#errortime').val('')			
 				$('#modal-timeframe').modal('hide');
-				bootbox.alert("Timeframe successfully updated!");			
+				bootbox.alert("Timeframe successfully updated!");							
+			}).done(function(){
+				updategraph()
 			})
 		}else{
 			bootbox.alert('Please make sure Warning Time and Error Time is numeric or not empty!')
@@ -90,11 +93,36 @@ $(function(){
 				$('#validationerror').val('')
 				$('#modal-validation').modal('hide');
 				bootbox.alert("Survey validation successfully updated!");			
+			}).done(function(){
+				updategraph();
 			})	
 		}else{
 			bootbox.alert('Please make sure Warning Time and Validation Warning Minute and Error Minute is numeric or not empty!')
 		}		
 	})
+
+	function updategraph(){
+		$.get(window.location.href + 'graph',{SurveyName:graphsurveyname,Unit:$('#unit').val(),Days:$('days').val()},function(data){
+			var arr = [];
+			for(var i in data){						
+				arr.push(data[i].OffSet)						
+			}
+			if(arraysEqual(arrSurvey,arr) == true){
+				init_graph(graphsurveyname,$('#unit').val(),$('#days').val());
+			}					
+		})				
+	}
+
+	function arraysEqual(arr1, arr2) {
+    if(arr1.length !== arr2.length)
+      return false;
+    for(var i = arr1.length; i--;) {
+      if(arr1[i] !== arr2[i])
+        return false;
+    }
+
+    return true;
+	}
 	/**
 	 * [showTimeFrames description]
 	 * @return {[type]} [description]
@@ -241,6 +269,7 @@ $(function(){
 			var seriesData = [];
 			for(var i in data){
 				xAxisData.push(data[i].DataDate)
+				arrSurvey.push(data[i].OffSet)
 				seriesData.push({value : data[i].OffSet, itemStyle : {
 					normal : {
             color : data[i].ColorCode
