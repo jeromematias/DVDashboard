@@ -41,7 +41,7 @@ $(function(){
 			})			
 		})
 	})
-	$div.bind('container', function(e) {	   
+	$('#container').bind('resize', function(e) {	   
 	   echartBar.resize();
 	});
 	window.resize(function(){
