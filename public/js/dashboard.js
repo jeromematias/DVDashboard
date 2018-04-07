@@ -41,10 +41,15 @@ $(function(){
 			})			
 		})
 	})
-
+	$div.bind('container', function(e) {	   
+	   echartBar.resize();
+	});
 	window.resize(function(){
 		echartBar.resize();
 	})
+	function appendContent($div, content) {
+   $div.append(content).trigger($.Event('resize'));
+	}
 	
 	$('#savetimeframe').click(function(){
 		var request = {
