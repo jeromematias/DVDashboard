@@ -9,6 +9,7 @@ $(function(){
 	var weekday;
 	var validationsurveyname;
 	var graphsurveyname;
+	var echartBar;
 	$.get(window.location.href + "Surveys",function(data){
 		console.log(data)		
 		for(var i in data){
@@ -39,6 +40,10 @@ $(function(){
 				}
 			})			
 		})
+	})
+
+	window.resize(function(){
+		echartBar.resize();
 	})
 	
 	$('#savetimeframe').click(function(){
@@ -221,7 +226,7 @@ $(function(){
 				}})
 			}
 			$('#SurveyTabName').text(SurveyName)
-			var echartBar = echarts.init(document.getElementById('container'));			
+			echartBar = echarts.init(document.getElementById('container'));			
 			option = null;
 			option = {
 			    xAxis: {
