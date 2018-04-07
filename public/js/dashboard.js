@@ -30,8 +30,12 @@ $(function(){
 		init_graph(graphsurveyname);
 
 		$('#surveylist .nav-link').each(function(){
-			$(this).click(function(){
-				alert($(this).data('value'))
+			$(this).click(function(){				
+				if(graphsurveyname != $(this).data('value')){
+					alert($(this).data('value')+" now loading")
+				}else{
+					alert($(this).data('value') + " already loaded")
+				}
 			})			
 		})
 	})
