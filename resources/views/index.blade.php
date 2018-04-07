@@ -34,9 +34,9 @@
     </ul>
     <div class="tab-content">
       <div class="tab-pane active" id="home" role="tabpanel">
-        <div class="row col-sm-5 ml-auto border" style="height: 70px;margin-top: 0px;">
+        <div class="row col-sm-5 ml-auto" style="height: 70px;margin-top: 0px;">
           <div class="form-group col-sm-6">
-            <label class="col-form-label col-sm-12" for="unit">Unit</label>
+            <label class="col-form-label col-form-label-sm col-sm-12" for="unit">Unit</label>
             <div class="col-sm-12">
               <select id="surveynames" name="surveynames" class="form-control">
                 <option value="">Loading Survey Names...</option>                
