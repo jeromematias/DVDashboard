@@ -74,18 +74,22 @@ $(function(){
 	})
 
 	$('#savevalidation').click(function(){
-		var request = {
-			SurveyName : $('#surveynames').val(),			
-			validationwarning : $('#validationwarning').val(),
-			validationerror : $('#validationerror').val()
-		}
-		$.get(window.location.href + "updatesurvey",request,function(response){
-			showvalidation();
-			$('#validationwarning').val('')
-			$('#validationerror').val('')
-			$('#modal-validation').modal('hide');
-			bootbox.alert("Survey validation successfully updated!");			
-		})		
+		if($.isNumeric($('#validationwarning').val()) && $.isNumeric($('#validationerror').val())){
+			var request = {
+				SurveyName : $('#surveynames').val(),			
+				validationwarning : $('#validationwarning').val(),
+				validationerror : $('#validationerror').val()
+			}
+			$.get(window.location.href + "updatesurvey",request,function(response){
+				showvalidation();
+				$('#validationwarning').val('')
+				$('#validationerror').val('')
+				$('#modal-validation').modal('hide');
+				bootbox.alert("Survey validation successfully updated!");			
+			})	
+		}else{
+			bootbox.alert('Please make sure Warning Time and Validation Warning Minute and Error Minute is numeric or not empty!')
+		}		
 	})
 	/**
 	 * [showTimeFrames description]
