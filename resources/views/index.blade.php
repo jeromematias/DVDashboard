@@ -12,11 +12,11 @@
 @stop
 @section('breadcrumb')
 <!-- Breadcrumb -->
-<ol class="breadcrumb bg-success" id="breadcrumb1">
+<ol class="breadcrumb" id="breadcrumb1">
   <li class="breadcrumb-item text-dark">Converting : &nbsp;&nbsp;&nbsp;&nbsp; <a id="con-date">Last date loaded : loading</a></li>
   <li class="breadcrumb-item text-dark"><a id="con-status">loading status</a></li>
 </ol>
-<ol class="breadcrumb bg-warning" id="breadcrumb2">
+<ol class="breadcrumb" id="breadcrumb2">
   <li class="breadcrumb-item text-dark">Validating : &nbsp;&nbsp;&nbsp;&nbsp; <a id="val-date">Last date loaded : loading</a></li>  
   <li class="breadcrumb-item text-dark"><a id="val-status">Manual : loading status</a></li>        
 </ol>
