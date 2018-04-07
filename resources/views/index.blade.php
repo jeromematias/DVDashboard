@@ -35,7 +35,7 @@
     <div class="tab-content">
       <div class="tab-pane active" id="home" role="tabpanel">
         <div class="row col-sm-3 ml-auto border" style="height: 70px;margin-top: 0px;">
-          <div class="form-group col-sm-9">
+          <div class="form-group col-sm-8">
             <label class="col-form-label col-form-label-sm col-sm-12" for="unit">Unit</label>
             <div class="col-sm-12">
               <select id="surveynames" name="surveynames" class="form-control form-control-sm">
@@ -43,7 +43,7 @@
               </select>
             </div>
           </div>
-          <div class="form-group  col-sm-3">
+          <div class="form-group  col-sm-4">
             <label class="col-form-label  col-form-label-sm col-sm-12" for="unit">Unit</label>
             <div class="col-sm-12">
               <select id="surveynames" name="surveynames" class="form-control form-control-sm">
