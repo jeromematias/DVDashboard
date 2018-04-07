@@ -94,8 +94,7 @@ $(function(){
 				bootbox.alert("Timeframe successfully updated!");							
 			}).done(function(){
 				if($('#surveynames').val() == graphsurveyname){
-					updategraph()
-					console.log('test')
+					updategraph()					
 				}				
 			})
 		}else{
