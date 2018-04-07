@@ -44,7 +44,7 @@
 <!-- The Modal -->
 
 <!--conversion-->
-<div class="modal fade" id="modal-timeframe" style="height : 50%;">
+<div class="modal fade" id="modal-timeframe" style="height : 400px;">
   <div class="modal-dialog modal-md" style="height : calc(100% - 150px);">
     <div class="modal-content" style="height : 100%;">
       <!-- Modal Header -->
@@ -75,7 +75,7 @@
 </div>
 
 <!-- validation -->
-<div class="modal fade" id="modal-validation" style="height : 50%;">
+<div class="modal fade" id="modal-validation" style="height : 100%;">
   <div class="modal-dialog modal-md" style="height : calc(100% - 150px);">
     <div class="modal-content" style="height : 100%;">
       <!-- Modal Header -->
