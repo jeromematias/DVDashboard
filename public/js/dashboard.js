@@ -59,7 +59,7 @@ $(function(){
 			$.get(window.location.href+'status',{SurveyName:graphsurveyname,Unit:2},function(response){
 				console.log(response)
 				$('#val-date').text("Last date loaded : "+response[0].LatestDataDate)
-				$('#val-status').text(response[0].ProcessName)
+				$('#val-status').text("Manual : "+response[0].ProcessName)
 			})
 		}
 	})
