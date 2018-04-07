@@ -94,7 +94,7 @@ $(function(){
 				bootbox.alert("Timeframe successfully updated!");							
 			}).done(function(){
 				if($('#surveynames').val() == graphsurveyname){
-					init_graph(graphsurveyname,$('#unit').val(),$('#days').val());			
+					updategraph();
 				}				
 			})
 		}else{
@@ -117,7 +117,7 @@ $(function(){
 				bootbox.alert("Survey validation successfully updated!");			
 			}).done(function(){
 				if($('#surveynames').val() == graphsurveyname){
-					init_graph(graphsurveyname,$('#unit').val(),$('#days').val());
+					updategraph();
 				}
 			})	
 		}else{
@@ -126,23 +126,28 @@ $(function(){
 	})
 
 	function updategraph(){
-		$.get(window.location.href + 'graph',{SurveyName:graphsurveyname,Unit:$('#unit').val(),Days:$('#days').val()},function(data){
+		var request = {
+			SurveyName : graphsurveyname,
+			Unit : $('#unit').val(),
+			Days : $('#days').val()
+		}
+		$.get(window.location.href + 'graph',request,function(data){
 			var arr = [];
 			console.log(data)
 			for(var i in data){						
 				arr.push(data[i].OffSet)						
 			}
-			if(arraysEqual(arrSurvey,arr) == true){
+			if(arraysEqual(arrSurvey,arr) == false){
 				init_graph(graphsurveyname,$('#unit').val(),$('#days').val());
 			}			
 		})				
 	}
 
 	function arraysEqual(arr1, arr2) {
-    if(arr1.length !== arr2.length)
+    if(arr1.length != arr2.length)
       return false;
     for(var i = arr1.length; i--;) {
-      if(arr1[i] !== arr2[i])
+      if(arr1[i] != arr2[i])
         return false;
     }
     console.log("graph",{status : 'updaterequired'})
