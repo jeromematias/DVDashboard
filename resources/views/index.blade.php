@@ -34,7 +34,20 @@
     </ul>
     <div class="tab-content">
       <div class="tab-pane active" id="home" role="tabpanel">
-        <div class="col-sm-9 ml-auto">test</div>        
+        <div class="col-sm-5 ml-auto">
+          <div class="form-group row">
+            
+            <div class="form-group">
+              <label class="form-control" for="unit">Unit</label>
+              <div class="col-md-6">
+                <select id="surveynames" name="surveynames" class="form-control">
+                  <option value="">Loading Survey Names...</option>                
+                </select>
+              </div>
+            </div>
+
+          </div>
+        </div>        
         <div id="container" style="height: calc(100% - 60px);"></div>
       </div>      
     </div>
