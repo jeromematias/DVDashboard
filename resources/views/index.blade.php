@@ -75,7 +75,7 @@
 </div>
 
 <!-- validation -->
-<div class="modal fade" id="modal-validation" style="height : 100%;">
+<div class="modal fade" id="modal-validation" style="height : 600px;">
   <div class="modal-dialog modal-md" style="height : calc(100% - 150px);">
     <div class="modal-content" style="height : 100%;">
       <!-- Modal Header -->
