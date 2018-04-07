@@ -79,6 +79,7 @@ $(function(){
 			showvalidation();
 			$('#validationwarning').val('')
 			$('#validationerror').val('')
+			$('#modal-validation').modal('hide');
 			bootbox.alert("Survey validation successfully updated!");			
 		})		
 	})
