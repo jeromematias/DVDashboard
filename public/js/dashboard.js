@@ -28,13 +28,13 @@ $(function(){
 		init_surveynames();
 		showTimeFrames();
 		showvalidation();
-		init_graph(graphsurveyname);
+		init_graph(graphsurveyname,$('#unit').val(),$('#days').val());
 
 		$('#surveylist .nav-link').each(function(){
 			$(this).click(function(){				
 				if(graphsurveyname != $(this).data('value')){					
 					graphsurveyname = $(this).data('value');
-					init_graph(graphsurveyname);
+					init_graph(graphsurveyname,$('#unit').val(),$('#days').val());
 				}else{
 					bootbox.alert($(this).data('value') + " already loaded")					
 				}
@@ -230,8 +230,8 @@ $(function(){
 		})
 	}
 
-	function init_graph(SurveyName){
-		$.get(window.location.href + 'graph',{SurveyName:SurveyName},function(data){
+	function init_graph(SurveyName,Unit,Days){
+		$.get(window.location.href + 'graph',{SurveyName:SurveyName,Unit:Unit,Days:Days},function(data){
 			console.log(data)
 			var xAxisData = [];
 			var seriesData = [];

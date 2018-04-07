@@ -48,8 +48,8 @@ class dbcontroller extends Controller
   	return response('success');
   }
 
-  public function GetDiff(Request $r){
-  	$this->difference = DB::select('EXEC GetDiff ?',array($r->SurveyName));
+  public function GetDiff(Request $r){  	
+  	$this->difference = DB::select('EXEC GetDiff ?, ?, ?',array($r->SurveyName,$r->Unit,$r->Days));
   	return response($this->difference);
   }  
 }
