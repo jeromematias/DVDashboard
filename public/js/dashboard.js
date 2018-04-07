@@ -95,6 +95,7 @@ $(function(){
 			}).done(function(){
 				if($('#surveynames').val() == graphsurveyname){
 					updategraph();
+					checkStatus();
 				}				
 			})
 		}else{
@@ -118,6 +119,7 @@ $(function(){
 			}).done(function(){
 				if($('#surveynames').val() == graphsurveyname){
 					updategraph();
+					checkStatus();
 				}
 			})	
 		}else{
