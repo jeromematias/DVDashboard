@@ -38,7 +38,7 @@
           <div class="form-group col-sm-6">
             <label class="col-form-label col-form-label-sm col-sm-12" for="unit">Unit</label>
             <div class="col-sm-12">
-              <select id="surveynames" name="surveynames" class="form-control">
+              <select id="surveynames" name="surveynames" class="form-control form-control-sm">
                 <option value="">Loading Survey Names...</option>                
               </select>
             </div>
@@ -46,7 +46,7 @@
           <div class="form-group  col-sm-6">
             <label class="col-form-label  col-form-label-sm col-sm-12" for="unit">Unit</label>
             <div class="col-sm-12">
-              <select id="surveynames" name="surveynames" class="form-control">
+              <select id="surveynames" name="surveynames" class="form-control form-control-sm">
                 <option value="">Loading Survey Names...</option>                
               </select>
             </div>
