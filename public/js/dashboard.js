@@ -50,10 +50,10 @@ $(function(){
 
 		setInterval(checkStatus, 1*1000);
 		function checkStatus(){
-			$.get(window.location.href+'status',{graphsurveyname,1},function(response){
+			$.get(window.location.href+'status',{SurveyName:graphsurveyname,Unit:1},function(response){
 				console.log(response)
 			})
-			$.get(window.location.href+'status',{graphsurveyname,2},function(response){
+			$.get(window.location.href+'status',{SurveyName:graphsurveyname,Unit:2},function(response){
 				console.log(response)
 			})
 		}
