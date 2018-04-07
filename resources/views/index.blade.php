@@ -35,7 +35,7 @@
     <div class="tab-content">
       <div class="tab-pane active" id="home" role="tabpanel">
         <div class="col-sm-5 ml-auto">
-          <div class="form-group row">
+          <div class="form-group row" style="padding-top: 0;">
             <label class="col-form-label col-sm-12" for="unit">Unit</label>
             <div class="col-sm-12">
               <select id="surveynames" name="surveynames" class="form-control">
