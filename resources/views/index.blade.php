@@ -40,8 +40,8 @@
             <div class="row">
               
               <div class="form-group">
-                <label class="col-form-label" for="unit">Unit</label>
-                <div class="col-md-6">
+                <label class="col-form-label col-sm-12" for="unit">Unit</label>
+                <div class="col-sm-12">
                   <select id="surveynames" name="surveynames" class="form-control">
                     <option value="">Loading Survey Names...</option>                
                   </select>
