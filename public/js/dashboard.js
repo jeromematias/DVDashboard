@@ -30,7 +30,9 @@ $(function(){
 		init_graph(graphsurveyname);
 
 		$('#surveylist .nav-link').each(function(){
-			alert($(this).data('value'))
+			$(this).click(function(){
+				alert($(this).data('value'))
+			})			
 		})
 	})
 	
