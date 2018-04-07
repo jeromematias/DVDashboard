@@ -31,10 +31,11 @@ $(function(){
 
 		$('#surveylist .nav-link').each(function(){
 			$(this).click(function(){				
-				if(graphsurveyname != $(this).data('value')){
-					bootbox.alert($(this).data('value')+" now loading")
+				if(graphsurveyname != $(this).data('value')){					
+					graphsurveyname = $(this).data('value');
+					init_graph(graphsurveyname);
 				}else{
-					bootbox.alert($(this).data('value') + " already loaded")
+					bootbox.alert($(this).data('value') + " already loaded")					
 				}
 			})			
 		})
