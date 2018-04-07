@@ -48,26 +48,7 @@ $(function(){
 			cursor : 'pointer'
 		})
 		checkStatus();
-		setInterval(checkStatus, 60*1000);
-		function checkStatus(){
-			$.get(window.location.href+'status',{SurveyName:graphsurveyname,Unit:1},function(response){
-				console.log(response)
-				$('#con-date').text("Last date loaded : "+response[0].LatestDataDate)
-				$('#con-status').text(response[0].ProcessName)				
-				$('#breadcrumb1').css({
-					backgroundColor : response[0].ColorCode
-				})
-			})
-			$.get(window.location.href+'status',{SurveyName:graphsurveyname,Unit:2},function(response){
-				console.log(response)
-				$('#val-date').text("Last date loaded : "+response[0].LatestDataDate)
-				$('#val-status').text("Manual : "+response[0].ProcessName)
-				$('#breadcrumb2').css({
-					backgroundColor : response[0].ColorCode
-				})
-			})
-			updategraph();
-		}
+		setInterval(checkStatus, 60*1000);		
 	})
 	$('#container').bind('resize', function(e) {	   
 	   echartBar.resize();
@@ -77,7 +58,25 @@ $(function(){
 	window.onresize = function() {
     echartBar.resize();
   }	
-	
+	function checkStatus(){
+		$.get(window.location.href+'status',{SurveyName:graphsurveyname,Unit:1},function(response){
+			console.log(response)
+			$('#con-date').text("Last date loaded : "+response[0].LatestDataDate)
+			$('#con-status').text(response[0].ProcessName)				
+			$('#breadcrumb1').css({
+				backgroundColor : response[0].ColorCode
+			})
+		})
+		$.get(window.location.href+'status',{SurveyName:graphsurveyname,Unit:2},function(response){
+			console.log(response)
+			$('#val-date').text("Last date loaded : "+response[0].LatestDataDate)
+			$('#val-status').text("Manual : "+response[0].ProcessName)
+			$('#breadcrumb2').css({
+				backgroundColor : response[0].ColorCode
+			})
+		})
+		updategraph();
+	}
 	$('#savetimeframe').click(function(){
 		if($.isNumeric($('#warningtime').val()) && $.isNumeric($('#errortime').val())){
 			var request = {
