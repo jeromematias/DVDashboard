@@ -209,6 +209,7 @@ $(function(){
           }
 				}})
 			}
+			$('#SurveyTabName').text(SurveyName+"tesssst")
 			var echartBar = echarts.init(document.getElementById('container'));			
 			option = null;
 			option = {
