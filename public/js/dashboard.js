@@ -54,19 +54,23 @@ $(function(){
   }	
 	
 	$('#savetimeframe').click(function(){
-		var request = {
-			SurveyName : $('#surveynames').val(),
-			WeekNum : weekday,
-			WarningTime : $('#warningtime').val(),
-			ErrorTime : $('#errortime').val()
-		}
-		$.get(window.location.href + "updatetimeframe",request,function(response){
-			showTimeFrames();
-			$('#warningtime').val('')
-			$('#errortime').val('')			
-			$('#modal-timeframe').modal('hide');
-			bootbox.alert("Timeframe successfully updated!");			
-		})
+		if($.isNumeric($('#warningtime').val()) && $.isNumeric($('#errortime').val())){
+			var request = {
+				SurveyName : $('#surveynames').val(),
+				WeekNum : weekday,
+				WarningTime : $('#warningtime').val(),
+				ErrorTime : $('#errortime').val()
+			}
+			$.get(window.location.href + "updatetimeframe",request,function(response){
+				showTimeFrames();
+				$('#warningtime').val('')
+				$('#errortime').val('')			
+				$('#modal-timeframe').modal('hide');
+				bootbox.alert("Timeframe successfully updated!");			
+			})
+		}else{
+			bootbox.aert('Please make sure Warning Time and Error Time is numeric or not empty!')
+		}		
 	})
 
 	$('#savevalidation').click(function(){
