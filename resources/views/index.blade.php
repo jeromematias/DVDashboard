@@ -35,7 +35,7 @@
     <div class="tab-content">
       <div class="tab-pane active" id="home" role="tabpanel">
         <div class="col-sm-9 ml-auto">test</div>        
-        <div id="container" style="height: 100%;"></div>
+        <div id="container" style="height: calc(100% - 60px);"></div>
       </div>      
     </div>
   </div>
