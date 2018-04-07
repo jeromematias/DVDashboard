@@ -52,7 +52,7 @@ $(function(){
 		function checkStatus(){
 			$.get(window.location.href+'status',{SurveyName:graphsurveyname,Unit:1},function(response){
 				console.log(response)
-				$('#con-date').text(response[0].LatestDataDate)
+				$('#con-date').text("Last date loaded : "+response[0].LatestDataDate)
 				$('#con-status').text(response[0].ProcessName)
 				//response[0].ColorCode
 			})
