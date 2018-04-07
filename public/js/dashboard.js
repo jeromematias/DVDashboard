@@ -43,6 +43,7 @@ $(function(){
 	})
 	$('#container').bind('resize', function(e) {	   
 	   echartBar.resize();
+	   console.log('test')
 	});
 	window.resize(function(){
 		echartBar.resize();
