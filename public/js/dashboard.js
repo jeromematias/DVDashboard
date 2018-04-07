@@ -44,7 +44,11 @@ $(function(){
 	$('#container').bind('resize', function(e) {	   
 	   echartBar.resize();
 	   console.log('test')
-	});	
+	});
+
+	window.onresize = function() {
+    echartBar.resize();
+  }	
 	
 	$('#savetimeframe').click(function(){
 		var request = {
