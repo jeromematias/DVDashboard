@@ -119,7 +119,7 @@ $(function(){
       if(arr1[i] !== arr2[i])
         return false;
     }
-    console.log("update","required")
+    console.log("graph",{status : 'updaterequired'})
     return true;
 	}
 	/**
@@ -307,7 +307,8 @@ $(function(){
 	            }
 			    }]
 			};
-			echartBar.setOption(option);	
+			echartBar.setOption(option);
+			console.log("graph",{status : "graph loaded"})	
 		})		
 	}		
 });
