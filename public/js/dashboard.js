@@ -94,7 +94,7 @@ $(function(){
 				bootbox.alert("Timeframe successfully updated!");							
 			}).done(function(){
 				if($('#surveynames').val() == graphsurveyname){
-					updategraph()					
+					init_graph(graphsurveyname,$('#unit').val(),$('#days').val());			
 				}				
 			})
 		}else{
@@ -117,7 +117,7 @@ $(function(){
 				bootbox.alert("Survey validation successfully updated!");			
 			}).done(function(){
 				if($('#surveynames').val() == graphsurveyname){
-					updategraph();
+					init_graph(graphsurveyname,$('#unit').val(),$('#days').val());
 				}
 			})	
 		}else{
