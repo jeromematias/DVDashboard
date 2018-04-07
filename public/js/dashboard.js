@@ -9,7 +9,7 @@ $(function(){
 	var weekday;
 	var validationsurveyname;
 	var graphsurveyname;
-	var arrSurvey;
+	var arrSurvey = [];
 	var echartBar;
 	$.get(window.location.href + "Surveys",function(data){
 		console.log(data)		
