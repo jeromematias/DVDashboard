@@ -129,6 +129,7 @@ $(function(){
 	function updategraph(){
 		$.get(window.location.href + 'graph',{SurveyName:graphsurveyname,Unit:$('#unit').val(),Days:$('#days').val()},function(data){
 			var arr = [];
+			console.log(data)
 			for(var i in data){						
 				arr.push(data[i].OffSet)						
 			}
