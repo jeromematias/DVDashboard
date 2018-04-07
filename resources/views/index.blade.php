@@ -34,8 +34,8 @@
     </ul>
     <div class="tab-content">
       <div class="tab-pane active" id="home" role="tabpanel">
-        <div class="col-sm-5 ml-auto border">
-          <div class="form-group border">
+        <div class="col-sm-5 ml-auto">
+          <div class="form-group">
             <label class="col-form-label col-sm-12" for="unit">Unit</label>
             <div class="col-sm-12">
               <select id="surveynames" name="surveynames" class="form-control">
@@ -44,7 +44,7 @@
             </div>
           </div>
         </div>        
-        <div id="container" style="height: calc(100% - 60px);"></div>
+        <div id="container" style="height: calc(100% - 80px);"></div>
       </div>      
     </div>
   </div>
