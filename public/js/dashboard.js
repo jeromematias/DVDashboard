@@ -109,7 +109,8 @@ $(function(){
 			}
 			if(arraysEqual(arrSurvey,arr) == true){
 				init_graph(graphsurveyname,$('#unit').val(),$('#days').val());
-			}					
+			}
+			console.log(arraysEqual(arrSurvey,arr))					
 		})				
 	}
 
