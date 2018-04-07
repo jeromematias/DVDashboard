@@ -18,7 +18,7 @@
 </ol>
 <ol class="breadcrumb bg-warning" id="breadcrumb2">
   <li class="breadcrumb-item text-dark">Validating : &nbsp;&nbsp;&nbsp;&nbsp; <a id="val-date">Last date loaded : loading</a></li>  
-  <li class="breadcrumb-item text-dark"><i class="val-status">loading status</i></li>        
+  <li class="breadcrumb-item text-dark"><a class="val-status">loading status</a></li>        
 </ol>
 @stop
 @section('sidebar')
