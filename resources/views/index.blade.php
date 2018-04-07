@@ -13,8 +13,8 @@
 @section('breadcrumb')
 <!-- Breadcrumb -->
 <ol class="breadcrumb bg-success">
-  <li class="breadcrumb-item text-dark">Converting : &nbsp;&nbsp;&nbsp;&nbsp; <strong id="con-date"></strong></li>
-  <li class="breadcrumb-item text-dark"><strong id="con-status"></li>
+  <li class="breadcrumb-item text-dark">Converting : &nbsp;&nbsp;&nbsp;&nbsp; <strong id="con-date">Last date loaded : loading</strong></li>
+  <li class="breadcrumb-item text-dark"><strong id="con-status">loading status</strong></li>
 </ol>
 <ol class="breadcrumb bg-warning" id="breadcrumb2">
   <li class="breadcrumb-item text-dark">Validating : &nbsp;&nbsp;&nbsp;&nbsp; Last date loaded : 29 March 2018</li>  
