@@ -40,6 +40,9 @@ $(function(){
 				}
 			})			
 		})
+		$('#surveylist .nav-link').css({
+			cursor : 'pointer'
+		})
 	})
 	$('#container').bind('resize', function(e) {	   
 	   echartBar.resize();
