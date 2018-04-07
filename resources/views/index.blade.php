@@ -44,7 +44,7 @@
             </div>
           </div>
           <div class="form-group  col-sm-6">
-            <label class="col-form-label col-sm-12" for="unit">Unit</label>
+            <label class="col-form-label  col-form-label-sm col-sm-12" for="unit">Unit</label>
             <div class="col-sm-12">
               <select id="surveynames" name="surveynames" class="form-control">
                 <option value="">Loading Survey Names...</option>                
