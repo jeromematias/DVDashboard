@@ -220,10 +220,10 @@ $(function(){
 			        type: 'value',
 			    },
 			    grid: {
-              left: '60',
-              right: '0%',
-              bottom: '40',
-              top: '20%',
+              left: '1%',
+              right: '1%',
+              bottom: '0%',
+              top: '1%',              
               containLabel: true
           },
 			    series: [{
