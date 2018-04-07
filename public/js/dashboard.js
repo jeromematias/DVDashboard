@@ -160,7 +160,7 @@ $(function(){
 					output += '<tr>'+					
 										'<td class="text-center">'+ data[i].MinsValidationWarning +'</td>'+
 										'<td class="text-center">'+ data[i].MinsValidationError +'</td>'+
-										'<td><i class="icon-note float-right font-weight-bold text-primary" id="up-validation" data-value="'+ $('#surveynames').val() +'"></i></td>';
+										'<td><i class="icon-note float-right font-weight-bold text-primary" id="up-validation" data-id="'+ data[i].MinsValidationWarning +'" value="'+ data[i].MinsValidationError +'" data-value="'+ $('#surveynames').val() +'"></i></td>';
 					output += '</tr>'
 				}
 			}
@@ -174,7 +174,9 @@ $(function(){
 					$('#modal-validation').modal({
 						backdrop: 'static',
 	  				keyboard: false
-					})
+					})					
+					$('#validationwarning').val($(this).data('id'))
+					$('#validationerror').val($(this).attr('value'))
 				})
 				$(this).css({
 					cursor : 'pointer'
