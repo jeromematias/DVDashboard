@@ -48,13 +48,19 @@ $(function(){
 			cursor : 'pointer'
 		})
 
-		setInterval(checkStatus, 1*1000);
+		setInterval(checkStatus, 60*1000);
 		function checkStatus(){
 			$.get(window.location.href+'status',{SurveyName:graphsurveyname,Unit:1},function(response){
 				console.log(response)
+				$('#con-date').text(response[0].LatestDataDate)
+				$('#con-status').text(response[0].ProcessName)
+				//response[0].ColorCode
 			})
 			$.get(window.location.href+'status',{SurveyName:graphsurveyname,Unit:2},function(response){
 				console.log(response)
+				//response[0].LatestDataDate
+				//response[0].ProcessName
+				//response[0].ColorCode
 			})
 		}
 	})
