@@ -69,7 +69,7 @@ $(function(){
 				bootbox.alert("Timeframe successfully updated!");			
 			})
 		}else{
-			bootbox.aert('Please make sure Warning Time and Error Time is numeric or not empty!')
+			bootbox.alert('Please make sure Warning Time and Error Time is numeric or not empty!')
 		}		
 	})
 
