@@ -95,6 +95,7 @@ $(function(){
 			}).done(function(){
 				if($('#surveynames').val() == graphsurveyname){
 					updategraph()
+					console.log('test')
 				}				
 			})
 		}else{
