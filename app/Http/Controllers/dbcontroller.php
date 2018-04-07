@@ -56,5 +56,6 @@ class dbcontroller extends Controller
 
   public function GetStatus(Request $r){
   	$this->GetStatus = DB::select('EXEC GetStatus ?, ?',array($r->SurveyName,$r->Unit));
+  	return response($this->GetStatus);
   }  
 }
