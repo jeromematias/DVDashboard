@@ -60,7 +60,7 @@ $(function(){
 				console.log(response)
 				$('#val-date').text("Last date loaded : "+response[0].LatestDataDate)
 				$('#val-status').text("Manual : "+response[0].ProcessName)
-				$('#breadcrumb2').css("background-color", response[0].ColorCode)
+				$('#breadcrumb2').css("background-color", '#000')
 			})
 			updategraph();
 		}
