@@ -219,6 +219,13 @@ $(function(){
 			    yAxis: {
 			        type: 'value',
 			    },
+			    grid: {
+              left: '60',
+              right: '0%',
+              bottom: '40',
+              top: '20%',
+              containLabel: true
+          },
 			    series: [{
 			        data: seriesData,
 			        type: 'bar',
