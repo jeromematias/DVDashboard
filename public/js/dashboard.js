@@ -28,6 +28,10 @@ $(function(){
 		showTimeFrames();
 		showvalidation();
 		init_graph(graphsurveyname);
+
+		$('#surveylist .nav-link').each(function(){
+			alert($(this).data('value'))
+		})
 	})
 	
 	$('#savetimeframe').click(function(){
@@ -209,7 +213,7 @@ $(function(){
           }
 				}})
 			}
-			$('#SurveyTabName').text(SurveyName+"tesssst")
+			$('#SurveyTabName').text(SurveyName)
 			var echartBar = echarts.init(document.getElementById('container'));			
 			option = null;
 			option = {
