@@ -17,8 +17,8 @@
   <li class="breadcrumb-item text-dark"><a id="con-status">loading status</a></li>
 </ol>
 <ol class="breadcrumb bg-warning" id="breadcrumb2">
-  <li class="breadcrumb-item text-dark">Validating : &nbsp;&nbsp;&nbsp;&nbsp; Last date loaded : 29 March 2018</li>  
-  <li class="breadcrumb-item text-dark">Manual : Inactive</li>        
+  <li class="breadcrumb-item text-dark">Validating : &nbsp;&nbsp;&nbsp;&nbsp; <a id="val-date">Last date loaded : loading</a></li>  
+  <li class="breadcrumb-item text-dark"><i class="val-status">loading status</i></li>        
 </ol>
 @stop
 @section('sidebar')
