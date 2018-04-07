@@ -32,9 +32,9 @@ $(function(){
 		$('#surveylist .nav-link').each(function(){
 			$(this).click(function(){				
 				if(graphsurveyname != $(this).data('value')){
-					alert($(this).data('value')+" now loading")
+					bootbox.alert($(this).data('value')+" now loading")
 				}else{
-					alert($(this).data('value') + " already loaded")
+					bootbox.alert($(this).data('value') + " already loaded")
 				}
 			})			
 		})
