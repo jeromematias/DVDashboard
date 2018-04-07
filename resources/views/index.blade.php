@@ -29,7 +29,7 @@
   <div class="col-md-12 mb-4" id="tabs">
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a class="nav-link active" data-toggle="tab" href="#home" role="tab" aria-controls="home">Survey : Singtel Cencus</a>
+        <a class="nav-link active" data-toggle="tab" href="#home" role="tab" aria-controls="home">Survey : <strong class="font-weight-bold" id="SurveyTabName">Singtel Cencus</strong></a>
       </li>      
     </ul>
     <div class="tab-content">
