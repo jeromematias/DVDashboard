@@ -39,7 +39,9 @@
             <label class="col-form-label col-form-label-sm col-sm-12" for="unit">Unit</label>
             <div class="col-sm-12">
               <select id="unit" name="unit" class="form-control form-control-sm">
-                <option value="">Loading Survey Names...</option>                
+                <option value="1">Converted Time (actual compared to x)</option>                
+                <option value="2">Validated Time</option>                
+                <option value="3">Reprocessed Y / N</option>                
               </select>
             </div>
           </div>
@@ -47,7 +49,10 @@
             <label class="col-form-label  col-form-label-sm col-sm-12" for="days"># of Days</label>
             <div class="col-sm-12">
               <select id="days" name="days" class="form-control form-control-sm">
-                <option value="">Loading Survey Names...</option>                
+                <option value="7">7</option>
+                <option value="14">14</option>
+                <option value="31">31</option>
+                <option value="60">60</option>
               </select>
             </div>
           </div>
