@@ -50,7 +50,12 @@ $(function(){
 
 		setInterval(checkStatus, 1*1000);
 		function checkStatus(){
-			console.log('test')
+			$.get(window.location.href+'status',{graphsurveyname,1},function(response){
+				console.log(response)
+			})
+			$.get(window.location.href+'status',{graphsurveyname,2},function(response){
+				console.log(response)
+			})
 		}
 	})
 	$('#container').bind('resize', function(e) {	   
