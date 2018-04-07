@@ -38,7 +38,7 @@
           <div class="form-group row">
             
             <div class="form-group">
-              <label class="form-control" for="unit">Unit</label>
+              <label class="col-form-label" for="unit">Unit</label>
               <div class="col-md-6">
                 <select id="surveynames" name="surveynames" class="form-control">
                   <option value="">Loading Survey Names...</option>                
