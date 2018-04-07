@@ -33,7 +33,8 @@
       </li>      
     </ul>
     <div class="tab-content">
-      <div class="tab-pane active" id="home" role="tabpanel">        
+      <div class="tab-pane active" id="home" role="tabpanel">
+        <div class="form-group row col-sm-9 ml-auto">test</div>        
         <div id="container" style="height: 100%;"></div>
       </div>      
     </div>
