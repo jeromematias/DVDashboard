@@ -30,6 +30,10 @@ $(function(){
 		showvalidation();
 		init_graph(graphsurveyname,$('#unit').val(),$('#days').val());
 
+		$('#unit,#days').on('change',function(){
+			init_graph(graphsurveyname,$('#unit').val(),$('#days').val());
+		})
+
 		$('#surveylist .nav-link').each(function(){
 			$(this).click(function(){				
 				if(graphsurveyname != $(this).data('value')){					
