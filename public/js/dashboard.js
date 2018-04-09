@@ -315,16 +315,18 @@ $(function(){
 			        data: xAxisData,
 			        name: 'Days',
               nameLocation: 'middle',
+              nameGap : 60,
 			    },
 			    yAxis: {
 			        type: 'value',
 			        name: 'Minutes',
               nameLocation: 'middle',
+              nameGap : 60,
 			    },
 			    grid: {
-              left: '40',
+              left: '1%',
               right: '1%',
-              bottom: '0%',
+              bottom: '1%',
               top: '1%',              
               containLabel: true
           },
