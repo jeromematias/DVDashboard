@@ -326,7 +326,7 @@ $(function(){
 			    grid: {
               left: '60',
               right: '1%',
-              bottom: '40',
+              bottom: '60',
               top: '1%',              
               containLabel: true
           },
