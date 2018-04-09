@@ -334,7 +334,7 @@ $(function(){
 			        label: {
 	                normal: {
                     show: true,
-                    position: 'insideTop',
+                    position: 'Top',
                     color : '#000'
 	                },
 	                emphasis : {
