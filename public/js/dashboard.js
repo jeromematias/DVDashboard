@@ -334,8 +334,8 @@ $(function(){
 			        label: {
 	                normal: {
                     show: true,
-                    position: 'Top',
-                    color : '#000'
+                    color : '#000',
+                    position: 'Top',                    
 	                },
 	                emphasis : {
 	                	color : '#000'
