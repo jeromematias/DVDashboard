@@ -339,6 +339,10 @@ $(function(){
                     color : '#000',
                     position: 'top',
                     formatter : '{c}'                    
+	                },
+	                emphasis : {
+	                	show : true,
+	                	color : '#000'
 	                }
 	            }
 			    }]
