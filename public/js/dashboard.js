@@ -334,6 +334,7 @@ $(function(){
 			        data: seriesData,
 			        type: 'bar',
 			        label: {			        		
+			        		color : '#000',
 	                normal: {
                     show: true,                    
                     position: 'top',
