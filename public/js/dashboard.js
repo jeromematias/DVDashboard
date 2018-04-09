@@ -312,10 +312,14 @@ $(function(){
 			option = {
 			    xAxis: {
 			        type: 'category',
-			        data: xAxisData
+			        data: xAxisData,
+			        name: 'Days',
+              nameLocation: 'middle',
 			    },
 			    yAxis: {
 			        type: 'value',
+			        name: 'Minutes',
+              nameLocation: 'middle',
 			    },
 			    grid: {
               left: '1%',
