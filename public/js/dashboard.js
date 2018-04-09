@@ -337,7 +337,7 @@ $(function(){
 	                normal: {
                     show: true,
                     color : '#000',
-                    position: 'Top',
+                    position: 'top',
                     formatter : '{c}'                    
 	                }
 	            }
