@@ -324,9 +324,9 @@ $(function(){
               nameGap : 60,
 			    },
 			    grid: {
-              left: '1%',
+              left: '60',
               right: '1%',
-              bottom: '1%',
+              bottom: '40',
               top: '1%',              
               containLabel: true
           },
