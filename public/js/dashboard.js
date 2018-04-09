@@ -322,7 +322,7 @@ $(function(){
               nameLocation: 'middle',
 			    },
 			    grid: {
-              left: '1%',
+              left: '40',
               right: '1%',
               bottom: '0%',
               top: '1%',              
