@@ -335,10 +335,10 @@ $(function(){
 			        type: 'bar',
 			        label: {			        		
 	                normal: {
-                    show: true,
-                    color : '#000',
+                    show: true,                    
                     position: 'top',
-                    formatter : '{c}'                    
+                    formatter : '{c}',
+                    color : '#000',
 	                },
 	                emphasis : {
 	                	show : true,
