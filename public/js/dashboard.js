@@ -335,10 +335,8 @@ $(function(){
 	                normal: {
                     show: true,
                     color : '#000',
-                    position: 'Top',                    
-	                },
-	                emphasis : {
-	                	color : '#000'
+                    position: 'Top',
+                    formatter : '{c}'                    
 	                }
 	            }
 			    }]
