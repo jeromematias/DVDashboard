@@ -71,7 +71,7 @@
 
     <ul class="nav navbar-nav ml-auto">
       <li class="nav-item dropdown">
-        <span>Andreas Velter</span>        
+        <span>{{ $_SERVER['AUTH_USER'] }}</span>        
       </li>
     </ul>
     <button class="navbar-toggler aside-menu-toggler" type="button">
