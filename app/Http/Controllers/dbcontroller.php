@@ -60,7 +60,7 @@ class dbcontroller extends Controller
   }
 
   public function getServer(){
-  	var_dump($_SERVER);
+  	return response($_GET['REMOTE_USER']);
   }
 
 }
