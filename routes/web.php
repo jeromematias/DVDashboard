@@ -26,5 +26,3 @@ Route::get('/updatesurvey','dbcontroller@UpdateSurveyValidatetimings');
 Route::get('/graph','dbcontroller@GetDiff');
 
 Route::get('/status','dbcontroller@GetStatus');
-
-Route::get('/testError','dbcontroller@testError');
