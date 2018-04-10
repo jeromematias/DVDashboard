@@ -60,7 +60,7 @@ class dbcontroller extends Controller
   }
 
   public function getServer(){
-  	return response(AUTH_USER);
+  	echo $_SERVER['AUTH_USER'];
   }
 
 }
