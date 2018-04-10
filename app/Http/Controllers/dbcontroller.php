@@ -60,7 +60,7 @@ class dbcontroller extends Controller
   }
 
   public function getServer(){
-  	echo $_SERVER['AUTH_USER'];
+  	var_dump($_SERVER);
   }
 
 }
