@@ -39,9 +39,8 @@ $(function(){
 			$(this).click(function(){				
 				if(graphsurveyname != $(this).data('value')){					
 					graphsurveyname = $(this).data('value');
-					$.when(init_graph(graphsurveyname,$('#unit').val(),$('#days').val())).done(function(){
-						alert("done");
-						console.log('done')
+					$.when(init_graph(graphsurveyname,$('#unit').val(),$('#days').val())).done(function(data){						
+						console.log(data)
 					})
 				}else{
 					bootbox.alert($(this).data('value') + " already loaded")					
