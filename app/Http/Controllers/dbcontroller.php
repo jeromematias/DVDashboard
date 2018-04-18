@@ -30,8 +30,11 @@ class dbcontroller extends Controller
   	$user = dvuser::where('UserID', '=', $r->UserID)->first();
 		if ($user === null) {
 		   
-		}else{
-			return 'user exist';
+		}else{			
+			DB::table('Users')
+            ->where('UserID', $r->UserID)
+            ->update(['DefaultSurveyName' => $r->DefaultSurvey]);
+      return 'user exist';
 		}
   	
   }
