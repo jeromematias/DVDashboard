@@ -11,19 +11,19 @@ $(function(){
 	var graphsurveyname;
 	var arrSurvey = [];
 	var echartBar;
-	$.get(window.location.href + "defaultsurvey",{ UserID : $('#username').text() },function(data){		
+	$.get(window.location.href + "defaultsurvey",{ UserID : $('#username').text() }).then(function(data){		
 		graphsurveyname = data[0].DefaultSurvey
 		console.log(graphsurveyname)
 		return $.get(window.location.href + "Surveys");
-	}).then(function(result){
+	}).then(function(data){
 
-		for(var i in result){		
-			Surveylist.push(result[i].SurveyName)
+		for(var i in data){		
+			Surveylist.push(data[i].SurveyName)
 			Validationlist.push({
-				SurveyName : result[i].SurveyName,
-				SurveyCode : result[i].SurveyCode,
-				Warning : result[i].MinsValidationWarning,
-				Error : result[i].MinsValidationError,
+				SurveyName : data[i].SurveyName,
+				SurveyCode : data[i].SurveyCode,
+				Warning : data[i].MinsValidationWarning,
+				Error : data[i].MinsValidationError,
 			})
 		}
 		console.log(Surveylist);
