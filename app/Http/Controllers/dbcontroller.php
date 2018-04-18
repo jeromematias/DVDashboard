@@ -22,9 +22,12 @@ class dbcontroller extends Controller
   	$this->surveylist = Surveys::all();
   }
   public function UpdateUser(Request $r){
-  	DB::table('EXEC UpdateUser ?, ?',array($r->UserID,$r->DefaultSurvey));  	
+  	//DB::table('EXEC UpdateUser ?, ?',array($r->UserID,$r->DefaultSurvey));  	
+  	//insert into Users values(@UserID,@UserID,@DefaultSurveyName)
   	//update Users set DefaultSurveyName=@DefaultSurveyName where UserID=@UserID
-  	return 'success';
+  	//
+  	$user = dvuser::where('UserID', '=', $r->UserID)->first();
+		return $user;
   }
   /**
    * [GetUserDefaultSurvey description]
