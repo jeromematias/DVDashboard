@@ -1,9 +1,9 @@
-$.ajaxSetup({
-  headers: {
-    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-  }
-});
-$(function(){	
+$(function(){
+	$.ajaxSetup({
+    headers: {
+      'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+  });
 	var Surveylist = [];
 	var Validationlist = [];
 	var weekday;
@@ -352,7 +352,9 @@ $(function(){
 			echartBar.setOption(option);
 			console.log("graph",{status : "graph loaded"})				
 		}).then(function(){
-			$.post(window.location.href + 'updateuser',{ UserID : $('#username').text(), DefaultSurvey : SurveyName });
+			$.post(window.location.href + 'updateuser',{ UserID : $('#username').text(), DefaultSurvey : SurveyName },function(data){
+				console.log(data,{ UserID : $('#username').text(), DefaultSurvey : SurveyName })
+			});
 		})		
 	}		
 });

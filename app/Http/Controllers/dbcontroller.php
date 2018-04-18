@@ -24,7 +24,7 @@ class dbcontroller extends Controller
   public function UpdateUser(Request $r){
   	DB::table('EXEC UpdateUser ?, ?',array($r->UserID,$r->DefaultSurvey));  	
   	//update Users set DefaultSurveyName=@DefaultSurveyName where UserID=@UserID
-  	
+  	return 'success';
   }
   /**
    * [GetUserDefaultSurvey description]
