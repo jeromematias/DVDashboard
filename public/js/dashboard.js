@@ -12,11 +12,9 @@ $(function(){
 	var arrSurvey = [];
 	var echartBar;
 	$.get(window.location.href + "defaultsurvey",{ UserID : $('#username').text() }).then(function(data){		
-		graphsurveyname = data[0].DefaultSurvey
-		console.log(graphsurveyname)
+		graphsurveyname = data[0].DefaultSurvey		
 		return $.get(window.location.href + "Surveys");
 	}).then(function(data){
-
 		for(var i in data){		
 			Surveylist.push(data[i].SurveyName)
 			Validationlist.push({
@@ -41,7 +39,9 @@ $(function(){
 			$(this).click(function(){				
 				if(graphsurveyname != $(this).data('value')){					
 					graphsurveyname = $(this).data('value');
-					init_graph(graphsurveyname,$('#unit').val(),$('#days').val());
+					$.when(init_graph(graphsurveyname,$('#unit').val(),$('#days').val())).done(function(){
+						bootbox.alert("done");
+					})
 				}else{
 					bootbox.alert($(this).data('value') + " already loaded")					
 				}
