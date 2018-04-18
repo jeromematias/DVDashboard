@@ -41,6 +41,7 @@ $(function(){
 					graphsurveyname = $(this).data('value');
 					$.when(init_graph(graphsurveyname,$('#unit').val(),$('#days').val())).done(function(){
 						alert("done");
+						console.log('done')
 					})
 				}else{
 					bootbox.alert($(this).data('value') + " already loaded")					
