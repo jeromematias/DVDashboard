@@ -39,9 +39,7 @@ $(function(){
 			$(this).click(function(){				
 				if(graphsurveyname != $(this).data('value')){					
 					graphsurveyname = $(this).data('value');
-					$.when(init_graph(graphsurveyname,$('#unit').val(),$('#days').val())).done(function(data){						
-						console.log(data)
-					})
+					init_graph(graphsurveyname,$('#unit').val(),$('#days').val());
 				}else{
 					bootbox.alert($(this).data('value') + " already loaded")					
 				}
@@ -295,7 +293,7 @@ $(function(){
 	}
 
 	function init_graph(SurveyName,Unit,Days){
-		$.get(window.location.href + 'graph',{SurveyName:SurveyName,Unit:Unit,Days:Days},function(data){			
+		$.get(window.location.href + 'graph',{SurveyName:SurveyName,Unit:Unit,Days:Days}).then(function(data){			
 			var xAxisData = [];
 			var seriesData = [];
 			for(var i in data){
@@ -352,7 +350,9 @@ $(function(){
 			    }]
 			};
 			echartBar.setOption(option);
-			console.log("graph",{status : "graph loaded"})	
+			console.log("graph",{status : "graph loaded"})				
+		}).then(function(){
+			$.post(window.location.href + 'updateuser',{ UserID : $('#username').text(), DefaultSurvey : SurveyName });
 		})		
 	}		
 });

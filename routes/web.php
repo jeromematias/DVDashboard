@@ -30,3 +30,5 @@ Route::get('/status','dbcontroller@GetStatus');
 Route::get('/getServer','dbcontroller@getServer');
 
 Route::get('/defaultsurvey','dbcontroller@GetUserDefaultSurvey');
+
+Route::post('/updateuser','dbcontroller@UpdateUser');

@@ -14,13 +14,21 @@ class dbcontroller extends Controller
 	protected $difference = array();
 	protected $GetStatus = array();
 	protected $GetUserDefaultSurvey = array();
+	protected $UpdateUser = array();
 	/**
 	 * [__construct description]
 	 */
   public function __construct(){
   	$this->surveylist = Surveys::all();
   }
-
+  public function UpdateUser(Request $r){
+  	$this->UpdateUser = DB::select('EXEC UpdateUser ?',array($r->UserID,$r->DefaultSurvey));
+  	return response($this->UpdateUser);
+  }
+  /**
+   * [GetUserDefaultSurvey description]
+   * @param Request $r [description]
+   */
   public function GetUserDefaultSurvey(Request $r){
   	$this->GetUserDefaultSurvey = DB::select('EXEC GetUserDefaultSurvey ?',array($r->UserID));
   	return response($this->GetUserDefaultSurvey);
