@@ -13,8 +13,7 @@ $(function(){
 	var echartBar;
 	$.get(window.location.href + "GetUserDefaultSurvey",{ UserID : $('#username').text() },function(data){
 		console.log(data)
-	})
-	//.then(function(){
+	}).then(function(){
 
 	})
 	$.get(window.location.href + "Surveys",function(data){		
