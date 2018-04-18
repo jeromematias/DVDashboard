@@ -28,8 +28,11 @@ class dbcontroller extends Controller
   	//update Users set DefaultSurveyName=@DefaultSurveyName where UserID=@UserID
   	//
   	$user = dvuser::where('UserID', '=', $r->UserID)->first();
-		if ($user === null) {
-		   
+		if ($user === null) {		   
+		  DB::table('Users')->insert([
+			    ['UserID' => $r->UserID,'UserName'=>$r->UserID,'DefaultSurveyName'=>$r->DefaultSurvey]			    
+			]);
+			return 'user and default survey created';
 		}else{			
 			DB::table('Users')
             ->where('UserID', $r->UserID)
