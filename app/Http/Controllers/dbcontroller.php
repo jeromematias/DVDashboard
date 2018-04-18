@@ -22,7 +22,7 @@ class dbcontroller extends Controller
   	$this->surveylist = Surveys::all();
   }
   public function UpdateUser(Request $r){
-  	$this->UpdateUser = DB::select('EXEC UpdateUser ?',array($r->UserID,$r->DefaultSurvey));  	
+  	DB::select('EXEC UpdateUser ?, ?',array($r->UserID,$r->DefaultSurvey));  	
   }
   /**
    * [GetUserDefaultSurvey description]
