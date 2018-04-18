@@ -28,3 +28,5 @@ Route::get('/graph','dbcontroller@GetDiff');
 Route::get('/status','dbcontroller@GetStatus');
 
 Route::get('/getServer','dbcontroller@getServer');
+
+Route::get('/defaultsurvey','dbcontroller@GetUserDefaultSurvey');
