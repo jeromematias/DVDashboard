@@ -16,6 +16,7 @@ $(function(){
 		console.log(graphsurveyname)
 		return $.get(window.location.href + "Surveys");
 	}).then(function(data){
+
 		for(var i in data){		
 			Surveylist.push(data[i].SurveyName)
 			Validationlist.push({
@@ -25,7 +26,8 @@ $(function(){
 				Error : data[i].MinsValidationError,
 			})
 		}
-
+		console.log(Surveylist);
+		console.log(data)
 		init_surveynames();
 		showTimeFrames();
 		showvalidation();
