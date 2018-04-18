@@ -11,6 +11,12 @@ $(function(){
 	var graphsurveyname;
 	var arrSurvey = [];
 	var echartBar;
+	$.get(window.location.href + "GetUserDefaultSurvey",{ UserID : $('#username').text() },function(data){
+		console.log(data)
+	})
+	//.then(function(){
+
+	})
 	$.get(window.location.href + "Surveys",function(data){		
 		for(var i in data){
 			if(i == 0){
