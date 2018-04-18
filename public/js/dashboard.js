@@ -14,14 +14,9 @@ $(function(){
 	$.get(window.location.href + "defaultsurvey",{ UserID : $('#username').text() },function(data){		
 		graphsurveyname = data[0].DefaultSurvey
 		console.log(graphsurveyname)
-	}).then(function(){
-
-	})
-	$.get(window.location.href + "Surveys",function(data){		
-		for(var i in data){
-			if(i == 0){
-				graphsurveyname = data[i].SurveyName;
-			}
+		return $.get(window.location.href + "Surveys");
+	}).then(function(data){
+		for(var i in data){		
 			Surveylist.push(data[i].SurveyName)
 			Validationlist.push({
 				SurveyName : data[i].SurveyName,
@@ -30,7 +25,7 @@ $(function(){
 				Error : data[i].MinsValidationError,
 			})
 		}
-	}).done(function(){
+
 		init_surveynames();
 		showTimeFrames();
 		showvalidation();
@@ -54,8 +49,9 @@ $(function(){
 			cursor : 'pointer'
 		})
 		checkStatus();
-		setInterval(checkStatus, 60*1000);		
+		setInterval(checkStatus, 60*1000);	
 	})
+	
 	$('#container').bind('resize', function(e) {	   
 	   echartBar.resize();
 	   console.log('test')
