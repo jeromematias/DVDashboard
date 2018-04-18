@@ -27,7 +27,12 @@ class dbcontroller extends Controller
   	//update Users set DefaultSurveyName=@DefaultSurveyName where UserID=@UserID
   	//
   	$user = dvuser::where('UserID', '=', $r->UserID)->first();
-		return $user;
+		if ($user === null) {
+		   
+		}else{
+			return 'user exist';
+		}
+  	
   }
   /**
    * [GetUserDefaultSurvey description]
