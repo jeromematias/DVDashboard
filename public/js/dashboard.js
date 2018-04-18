@@ -15,15 +15,15 @@ $(function(){
 		graphsurveyname = data[0].DefaultSurvey
 		console.log(graphsurveyname)
 		return $.get(window.location.href + "Surveys");
-	}).then(function(data){
+	}).then(function(result){
 
-		for(var i in data){		
-			Surveylist.push(data[i].SurveyName)
+		for(var i in result){		
+			Surveylist.push(result[i].SurveyName)
 			Validationlist.push({
-				SurveyName : data[i].SurveyName,
-				SurveyCode : data[i].SurveyCode,
-				Warning : data[i].MinsValidationWarning,
-				Error : data[i].MinsValidationError,
+				SurveyName : result[i].SurveyName,
+				SurveyCode : result[i].SurveyCode,
+				Warning : result[i].MinsValidationWarning,
+				Error : result[i].MinsValidationError,
 			})
 		}
 		console.log(Surveylist);
