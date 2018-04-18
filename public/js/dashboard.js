@@ -40,7 +40,7 @@ $(function(){
 				if(graphsurveyname != $(this).data('value')){					
 					graphsurveyname = $(this).data('value');
 					$.when(init_graph(graphsurveyname,$('#unit').val(),$('#days').val())).done(function(){
-						bootbox.alert("done");
+						alert("done");
 					})
 				}else{
 					bootbox.alert($(this).data('value') + " already loaded")					
