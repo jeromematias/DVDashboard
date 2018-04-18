@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use DB;
 use App\Surveys;
+use App\dvuser;
 use Illuminate\Http\Request;
 
 class dbcontroller extends Controller
