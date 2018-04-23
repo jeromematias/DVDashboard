@@ -23,9 +23,7 @@ $(function(){
 				Warning : data[i].MinsValidationWarning,
 				Error : data[i].MinsValidationError,
 			})
-		}
-		console.log(Surveylist);
-		console.log(data)
+		}		
 		init_surveynames();
 		showTimeFrames();
 		showvalidation();
@@ -53,24 +51,25 @@ $(function(){
 	})
 	
 	$('#container').bind('resize', function(e) {	   
-	   echartBar.resize();
-	   console.log('test')
+	   echartBar.resize();	   
 	});
 
 	window.onresize = function() {
     echartBar.resize();
-  }	
+  }
+  /**
+   * [checkStatus description]
+   * @return {[type]} [description]
+   */
 	function checkStatus(){
-		$.get(window.location.href+'status',{SurveyName:graphsurveyname,Unit:1},function(response){
-			console.log(response)
+		$.get(window.location.href+'status',{SurveyName:graphsurveyname,Unit:1},function(response){			
 			$('#con-date').text("Last date loaded : "+response[0].LatestDataDate)
 			$('#con-status').text(response[0].ProcessName)				
 			$('#breadcrumb1').css({
 				backgroundColor : response[0].ColorCode
 			})
 		})
-		$.get(window.location.href+'status',{SurveyName:graphsurveyname,Unit:2},function(response){
-			console.log(response)
+		$.get(window.location.href+'status',{SurveyName:graphsurveyname,Unit:2},function(response){			
 			$('#val-date').text("Last date loaded : "+response[0].LatestDataDate)
 			$('#val-status').text("Manual : "+response[0].ProcessName)
 			$('#breadcrumb2').css({
@@ -127,7 +126,10 @@ $(function(){
 			bootbox.alert('Please make sure Warning Time and Validation Warning Minute and Error Minute is numeric or not empty!')
 		}		
 	})
-
+	/**
+	 * [updategraph description]
+	 * @return {[type]} [description]
+	 */
 	function updategraph(){
 		var request = {
 			SurveyName : graphsurveyname,
@@ -135,8 +137,7 @@ $(function(){
 			Days : $('#days').val()
 		}
 		$.get(window.location.href + 'graph',request,function(data){
-			var arr = [];
-			console.log(data)
+			var arr = [];			
 			for(var i in data){						
 				arr.push(data[i].OffSet)						
 			}
@@ -145,7 +146,12 @@ $(function(){
 			}			
 		})				
 	}
-
+	/**
+	 * [arraysEqual description]
+	 * @param  {[type]} arr1 [description]
+	 * @param  {[type]} arr2 [description]
+	 * @return {[type]}      [description]
+	 */
 	function arraysEqual(arr1, arr2) {
     if(arr1.length !== arr2.length)
       return false;
@@ -208,7 +214,10 @@ $(function(){
 			
 		})	
 	}
-
+	/**
+	 * [showvalidation description]
+	 * @return {[type]} [description]
+	 */
 	function showvalidation(){
 		$.get(window.location.href + "Surveys",function(data){
 			//validation
@@ -250,6 +259,11 @@ $(function(){
 			})
 		})		
 	}
+	/**
+	 * [showeekday description]
+	 * @param  {[type]} num [description]
+	 * @return {[type]}     [description]
+	 */
 	function showeekday(num){
 		switch(Number(num)){
 			case 1 : 

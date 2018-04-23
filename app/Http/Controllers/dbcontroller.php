@@ -32,12 +32,12 @@ class dbcontroller extends Controller
 		  DB::table('Users')->insert([
 			    ['UserID' => $r->UserID,'UserName'=>$r->UserID,'DefaultSurveyName'=>$r->DefaultSurvey]			    
 			]);
-			return 'user and default survey created';
+			return 'user and default survey created...';
 		}else{			
 			DB::table('Users')
             ->where('UserID', $r->UserID)
             ->update(['DefaultSurveyName' => $r->DefaultSurvey]);
-      return 'user exist';
+      return 'user exist, updating Default Survey Name...';
 		}
   	
   }
