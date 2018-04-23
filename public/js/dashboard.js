@@ -369,6 +369,21 @@ $(function(){
 			$.post(window.location.href + 'updateuser',{ UserID : $('#username').text(), DefaultSurvey : SurveyName },function(data){
 				console.log(data,{ UserID : $('#username').text(), DefaultSurvey : SurveyName })
 			});
+		}).then(function(){
+			$.get(window.location.href+'status',{SurveyName:graphsurveyname,Unit:1},function(response){			
+				$('#con-date').text("Last date loaded : "+response[0].LatestDataDate)
+				$('#con-status').text(response[0].ProcessName)				
+				$('#breadcrumb1').css({
+					backgroundColor : response[0].ColorCode
+				})
+			})
+			$.get(window.location.href+'status',{SurveyName:graphsurveyname,Unit:2},function(response){			
+				$('#val-date').text("Last date loaded : "+response[0].LatestDataDate)
+				$('#val-status').text("Manual : "+response[0].ProcessName)
+				$('#breadcrumb2').css({
+					backgroundColor : response[0].ColorCode
+				})
+			})
 		})		
 	}		
 });
